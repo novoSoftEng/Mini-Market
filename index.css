@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box ;
+
+}
+
+
+
+
+
 h3{
     margin-left: 250%;
     margin-top: 5px;
@@ -9,26 +20,36 @@ nav{
     background-color: rgb(0,0,0,0.3);
 
 }
+#section1{
+    text-align: center;
+    text-decoration: underline;
+    border: 1px dotted black;
+    height: 89vh;
+    background-color: black;
+
+} 
+
 
 
 
 
 #form1{
-    width: 40%;
 
     border: 1px solid rgb(116, 109, 109);
-   
-   padding: 30px;
+  padding: 30px;
    border-radius: 5px;
    background-color: rgb(0,0,0,0.3);
 
   }
 body{
     background-color: rgb(0,0,0,0.2);
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
 
 }
 
-section{
+#section2{
     height: 88vh;
     display:flex;
     background-size: cover;
@@ -37,6 +58,78 @@ section{
 }
 
 input :hover{
-    border: 1px solid rgb(141, 131, 131);
+    border: 1px solid rgb(235, 235, 235);
 
+}
+.menu-btn{
+position: absolute;
+margin-left: 25px;
+margin-right: 150px;
+padding: 0;
+cursor: pointer;
+}
+.side-bare.active{
+    left: 0;
+}
+.menu-btn:hover{
+    color:white;
+}
+.side-bare{
+    background-color: rgb(142, 142, 142);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    overflow-y: auto;
+}
+.side-bare .menu{
+
+width: 100%;
+margin-top: 80px;
+
+}
+.side-bare .menu .item{
+    position: relative;
+    cursor: pointer;
+}
+.side-bare .menu .item a{
+    color: #fff;
+margin-left: 25px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 40px;
+}
+.side-bare .menu .item a:hover{
+    background: #e28743;
+    transition: 0.3s ease;
+}
+.side-bare .menu .item a i{
+    margin-right: 20px;
+}
+.side-bare .menu .item a .dropdown{
+    position: absolute;
+    right: 0;
+    transition: 0.3s ease;
+}
+.side-bare .menu .item .sub-menu{
+    background:rgba(255, 255, 255, 0.1) ;
+    display: none;
+}
+.side-bare .menu .item .sub-menu a{
+    padding-left: 60px;
+}
+
+.rotate{
+    transform: rotate(90deg);
+}
+.close-btn{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    right: 0;
+    margin: 15px;
+    cursor: pointer;
 }
