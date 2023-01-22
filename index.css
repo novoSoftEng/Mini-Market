@@ -133,3 +133,18 @@ margin-left: 25px;
     margin: 15px;
     cursor: pointer;
 }
+.foter{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(142, 142, 142);
+
+}
+.foter a{
+margin-left: 50px;
+}
+.foter a i{
+    margin-top: 70px;
+    font-size:x-large;
+    margin-left: 250px;
+    color: black;
+}
