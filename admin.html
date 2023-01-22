@@ -75,27 +75,31 @@
     </div>          
 
         <section id="section2">
-        <form action="" id="form1">
+        <form action="./php/addProduct.php" id="form1" method="post" enctype="multipart/form-data">
         <div class="form-group">    
              <label for="">Nom de produit :</label> 
-       <input type="text" placeholder="entrer le nom de produit" class="form-control">
+       <input type="text" placeholder="entrer le nom de produit" class="form-control" name="nom">
     </div>
        
        <div class="formm-group"> 
         <label for="">Description :</label>
-        <input type="text" placeholder="entrer la description de produit" class="form-control">
+        <input type="text" placeholder="entrer la description de produit" class="form-control" name="description">
     </div>
     <div class="formm-group"> 
         <label for="">Ajouter une photo :</label>
-        <input type="file" class="form-control btn-primary">
+        <input type="file" class="form-control btn-primary" name="image">
     </div>
       
         <div class="form-group">       
              <label for="">Prix :</label>
-            <input type="number" placeholder="entrer le prix de produit" class="form-control"><br>
+            <input type="number" placeholder="entrer le prix de produit" class="form-control" name="prix"><br>
             </div>
+            <div class="form-group">       
+                <label for="">Quantite :</label>
+               <input type="number" placeholder="entrer la quantité de produit" class="form-control" name="quantite"><br>
+               </div>
          <div class="form-group"> 
-            <input type="submit" value="Ajouter" class="form-control btn btn-outline-primary text-dark"  >
+            <input type="submit" value="Ajouter" class="form-control btn btn-outline-primary text-dark"  name="submit">
         </div>
 
        
