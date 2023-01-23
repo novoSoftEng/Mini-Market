@@ -1,3 +1,19 @@
+<?php
+session_start();
+
+require("php/commande.php");
+
+if(!isset($_SESSION['htovxcracf2242']))
+{
+    header("Location: login.php");
+}
+
+if(empty($_SESSION['htovxcracf2242']))
+{
+    header("Location: login.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +34,6 @@
 <body>
   
          
-   
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light ">  
         <div class="menu-btn">
@@ -29,17 +44,10 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="#!">modifier</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="admin.php">accueil</a></li>
                     <li class="nav-item"><a class="nav-link" href="adminsupp.php">supprimer</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="page2.php">tous les Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deconnexion.php">se deconnecter</a></li>
                 </ul>
                 <form class="d-flex">
                     <button class="btn btn-outline-dark" type="submit">
@@ -49,6 +57,8 @@
             </div>
         </div>
     </nav>
+
+  
 
    
     
@@ -108,9 +118,9 @@
 
     <footer class="foter">
         <div class="media-icons">
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fab fa-instagram"></i></a>
-<a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-facebook"></i></a>
+       <a href="#"><i class="fab fa-instagram"></i></a>
+       <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </footer>
 

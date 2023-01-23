@@ -47,7 +47,7 @@ require("php/commande.php");
                                 <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="admin.html">connexion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.php">connexion</a></li>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">

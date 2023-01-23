@@ -69,5 +69,35 @@ function supprimer($id)
 }
 
 
+function getAdmin($email, $password){
+  
+  if(require("conn.php")){
+
+    $req = $access->prepare("SELECT * FROM admin WHERE id=55");
+
+    $req->execute();
+
+    if($req->rowCount() == 1){
+      
+      $data = $req->fetchAll(PDO::FETCH_OBJ);
+
+      foreach($data as $i){
+        $mail = $i->email;
+        $mdp = $i->motdepasse;
+      }
+
+      if($mail == $email AND $mdp == $password)
+      {
+        return $data;
+      }
+      else{
+          return false;
+      }
+
+    }
+
+  }
+
+}
 
 ?>
