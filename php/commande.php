@@ -40,10 +40,11 @@ function afficherUnProduit($id)
     }
   }
 
-function afficher()
+function afficher($categorie)
 {
 	if(require("conn.php"))
 	{
+    if(!$categorie){
 		$req=$access->prepare("SELECT * FROM produit ORDER BY id_pr DESC");
 
         $req->execute();
@@ -51,8 +52,15 @@ function afficher()
         $data = $req->fetchAll(PDO::FETCH_OBJ);
 
         return $data;
+      }
+        else{
+          $req=$access->prepare("SELECT * FROM produit WHERE categories=? ORDER BY id_pr DESC ");
 
-        $req->closeCursor();
+        $req->execute(array($categorie));
+
+        $data = $req->fetchAll(PDO::FETCH_OBJ);
+          return $data;
+        }
 	}
 }
 
