@@ -7,7 +7,7 @@ if (isset($_SESSION['htovxcracf2242'])){
 
     session_destroy();
 
-    header("Location: page2.php");
+    header("Location: index.html");
 }
 
 ?>
