@@ -37,20 +37,20 @@ if(empty($_SESSION['htovxcracf2242']))
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light ">  
         <div class="menu-btn">
-        <i class="fas fa-bars"></i> 
+        <i class="fas fa-bars" style="color:white"></i> 
     </div>
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand "  style="margin-left: 100px; font-family: Georgia, 'Times New Roman', Times, serif;">YCA Market HI</a>
+            <a class="navbar-brand "  style="margin-left: 100px; font-family: Georgia, 'Times New Roman', Times, serif; color:white">YCA Market HI</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="admin.php">accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="adminsupp.php">supprimer</a></li>
-                    <li class="nav-item"><a class="nav-link" href="page2.php">tous les Produits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="deconnexion.php">se deconnecter</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="admin.php"style="color:white">accueil</a></li>
+                    <li class="nav-item"><a class="nav-link"  style="color:white" >Ajouter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page2.php" style="color:white">tous les Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="deconnexion.php" style="color:white">se deconnecter</a></li>
                 </ul>
                 <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
+                    <button class="btn btn-outline-dark" type="submit" style="color:white">
                         Admin
                     </button>
                 </form>
@@ -109,7 +109,7 @@ if(empty($_SESSION['htovxcracf2242']))
                <input type="number" placeholder="entrer la quantité de produit" class="form-control" name="quantite"><br>
                </div>
          <div class="form-group"> 
-            <input type="submit" value="Ajouter" class="form-control btn btn-outline-primary text-dark"  name="submit">
+            <input type="submit" value="Ajouter" class="form-control btn btn-outline-primary text-white"  name="submit">
         </div>
 
        
@@ -118,9 +118,9 @@ if(empty($_SESSION['htovxcracf2242']))
 
     <footer class="foter">
         <div class="media-icons">
-       <a href="#"><i class="fab fa-facebook"></i></a>
-       <a href="#"><i class="fab fa-instagram"></i></a>
-       <a href="#"><i class="fab fa-twitter"></i></a>
+       <a href="#"><i class="fab fa-facebook"style="color:white" ></i></a>
+       <a href="#"><i class="fab fa-instagram" style="color:white"></i></a>
+       <a href="#"><i class="fab fa-twitter" style="color:white"></i></a>
         </div>
     </footer>
 

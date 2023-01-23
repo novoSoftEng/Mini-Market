@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('#section2').hide();
   $('.sub-btn').click(function(){
     $(this).next('.sub-menu').slideToggle();
     $(this).find('.dropdown').toggleClass('rotate');
@@ -10,6 +11,8 @@ $(document).ready(function(){
   $('.close-btn').click(function(){
     $('.side-bare').removeClass('active');
     $('.menu-btn').css('visibility','visible');
-
+  })
+  $('.nav-link').click(function(){
+    $('#section2').show();
   })
 });
