@@ -33,7 +33,7 @@ li{
 } 
 .admin{
 text-decoration: none;
-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);
 }
 nav{   background-color: rgb(0,0,0,0.6);
 }
@@ -82,7 +82,8 @@ cursor: pointer;
     left: 0;
 }
 .menu-btn:hover{
-    color:white;
+    color: blue;
+    
 }
 .side-bare{
     background-color: rgb(0,0,0,0.6);
