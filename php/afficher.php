@@ -3,7 +3,6 @@
 
 require("commande.php");
 $categorie=$_GET['categorie'];
-
   $Produits=afficher($categorie);
   foreach($Produits as $produit):
    echo ' <div class="col mb-5">

@@ -1,12 +1,14 @@
 function afficher(categorie){
-    var url="categories.html";
-    window.location.replace(url);
-    $.ajax({
-        type: "GET",
+    $("#categories").hide();
+   $.ajax({
+       type: "GET",
         url: './php/afficher.php',
-        data: 'categorie=' + categorie,
+       data: 'categorie=' + categorie,
         success: function (produits) {
             $("#categories_choisis").empty().html(produits);
+        },
+        error: function () {
+            alert("problem");
         }
 
     });

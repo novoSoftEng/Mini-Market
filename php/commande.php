@@ -44,21 +44,22 @@ function afficher($categorie)
 {
 	if(require("conn.php"))
 	{
-    if(!$categories){
+    if(!$categorie){
 		$req=$access->prepare("SELECT * FROM produit ORDER BY id_pr DESC");
 
         $req->execute();
 
         $data = $req->fetchAll(PDO::FETCH_OBJ);
 
-        return $data}
+        return $data;
+      }
         else{
-          $req=$access->prepare("SELECT * FROM produit ORDER BY id_pr DESC WHERE categories=?");
+          $req=$access->prepare("SELECT * FROM produit WHERE categories=? ORDER BY id_pr DESC ");
 
         $req->execute(array($categorie));
 
         $data = $req->fetchAll(PDO::FETCH_OBJ);
-
+          return $data;
         }
 	}
 }
