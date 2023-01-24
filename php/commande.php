@@ -24,7 +24,7 @@ function afficherUnProduit($id)
 
         return $data;
 
-        $req->closeCursor();
+  
 	}
 }
 

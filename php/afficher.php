@@ -2,8 +2,10 @@
 
 
 require("commande.php");
+require("./classes/Produit.php");
 $categorie=$_GET['categorie'];
-  $Produits=afficher($categorie);
+$produits = new Produit();
+  $Produits=$produits->afficher_cat($categorie);
   foreach($Produits as $produit):
    echo ' <div class="col mb-5">
             <div class="card h-100">
