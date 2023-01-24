@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 23 jan. 2023 à 20:45
+-- Généré le : mar. 24 jan. 2023 à 23:29
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.1.12
 
@@ -91,17 +91,18 @@ CREATE TABLE `produit` (
   `prix` int(11) NOT NULL,
   `description` varchar(90) DEFAULT NULL,
   `image` blob NOT NULL,
-  `quantite` int(11) NOT NULL
+  `quantite` int(11) NOT NULL,
+  `categories` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Déchargement des données de la table `produit`
 --
 
-INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`) VALUES
-(2, 'seee', 5, 'dddd', 0x6c6f676f2e706e67, 5),
-(3, 'robes', 577, 'hhhhhhhhhhhhhhhhhhhsssssshhhh', 0x766574656d656e74696d616765362e6a7067, 4),
-(4, 'vetement', 7888, 'hahahahahahahahahaha', 0x696d616765392e706e67, 2);
+INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`, `categories`) VALUES
+(2, 'seee', 5, 'dddd', 0x6c6f676f2e706e67, 5, ''),
+(3, 'robes', 577, 'hhhhhhhhhhhhhhhhhhhsssssshhhh', 0x696d616765312e6a7067, 4, ''),
+(4, 'vetement', 7888, 'hahahahahahahahahaha', 0x696d616765392e706e67, 2, '');
 
 --
 -- Index pour les tables déchargées
