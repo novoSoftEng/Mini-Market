@@ -71,7 +71,8 @@ CREATE TABLE `produit` (
   `prix` int(11) NOT NULL,
   `description` varchar(90) DEFAULT NULL,
   `image` blob NOT NULL,
-  `quantite` int(11) NOT NULL
+  `quantite` int(11) NOT NULL,
+  'categories' varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
