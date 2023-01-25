@@ -17,6 +17,7 @@ body{
 .col:hover{
     color: blue;
 }
+
 .form-control{
    background-color: rgba(41, 208, 255, 0.2);
 }
