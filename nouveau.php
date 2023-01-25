@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['email'] = $email;
 
         // Redirigez le nouveau client vers la page d'accueil
-        header("Location: devvoir.php");
+        header("Location: index.html");
     } else {
         echo "Error: " . $query . "<br>" . $conn->error;
     }

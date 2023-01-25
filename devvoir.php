@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['email'] = $email;
 
         // Redirigez l'utilisateur vers la page d'accueil
-        header("Location: Mini-Market/#!");
+        header("Location: index.html");
     } else {
         // Affichez un message d'erreur si l'utilisateur n'existe pas
         echo "Adresse email ou mot de passe incorrect";
