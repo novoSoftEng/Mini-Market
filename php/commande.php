@@ -1,12 +1,12 @@
 <?php
 
-function modifier($nom, $prix, $desc, $image, $quantite, $id)
+function modifier($image, $nom, $prix, $desc, $id)
 {
   if(require("conn.php"))
   {
-    $req = $access->prepare("UPDATE produit SET `image` = ?, nom = ?, prix = ?, quantite = ?, description = ? WHERE id_pr=?");
+    $req = $access->prepare("UPDATE produit SET `image` = ?, nom = ?, prix = ?, description = ? WHERE id_pr=?");
 
-    $req->execute(array($image, $nom, $prix,$quantite, $desc, $id));
+    $req->execute(array($image, $nom, $prix, $desc, $id));
 
     $req->closeCursor();
   }
@@ -24,45 +24,70 @@ function afficherUnProduit($id)
 
         return $data;
 
-        $req->closeCursor();
+  
 	}
 }
 
-  function ajouter( $nom, $prix, $desc, $image, $quantite)
+  function ajouter( $nom, $prix,$quantite, $description )
   {
     if(require("conn.php"))
     {
-      $req = $access->prepare("INSERT INTO produit (image, nom, prix, quantite ,description) VALUES (?, ?, ?, ?, ?)");
+    
+         // $targetDir = "uploads/";
+         // $targetFilePath = $targetDir . $fileName;
+        // $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION); 
+        //  move_uploaded_file($_FILES['image']['tmp_name'],$targetDir.$fileName);
+        //  move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath);
+         $fileName = basename($_FILES["image"]["name"]);
+         $target="C:/xampp/htdocs/Mini-Market/vetement/".$fileName;
+          move_uploaded_file($_FILES['image']['tmp_name'], $target);
 
-      $req->execute(array($image, $nom, $prix, $desc));
+        $image=$fileName;
 
-      $req->closeCursor();
+        $query = $conn->prepare('INSERT INTO produit (nom , prix ,description ,image,quantite) VALUES(? , ? ,?,?,?)');
+         $query->execute([$nom,$prix,$description,$image,$quantite]);
+
     }
   }
-
-function afficher($categorie)
-{
-	if(require("conn.php"))
-	{
-    if(!$categorie){
-		$req=$access->prepare("SELECT * FROM produit ORDER BY id_pr DESC");
-
-        $req->execute();
-
-        $data = $req->fetchAll(PDO::FETCH_OBJ);
-
-        return $data;
-      }
-        else{
-          $req=$access->prepare("SELECT * FROM produit WHERE categories=? ORDER BY id_pr DESC ");
-
-        $req->execute(array($categorie));
-
-        $data = $req->fetchAll(PDO::FETCH_OBJ);
+  
+  function afficher()
+  {
+    if(require("conn.php"))
+    {
+      $req=$access->prepare("SELECT * FROM produit ORDER BY id_pr DESC");
+  
+          $req->execute();
+  
+          $data = $req->fetchAll(PDO::FETCH_OBJ);
+  
           return $data;
-        }
-	}
-}
+  
+          $req->closeCursor();
+    }
+  }
+// function afficher($categorie)
+// {
+// 	if(require("conn.php"))
+// 	{
+//     if(!$categorie){
+// 		$req=$access->prepare("SELECT * FROM produit ORDER BY id_pr DESC");
+
+//         $req->execute();
+
+//         $data = $req->fetchAll(PDO::FETCH_OBJ);
+
+//         return $data;
+//       }
+//         else{
+//           $req=$access->prepare("SELECT * FROM produit WHERE categories=? ORDER BY id_pr DESC ");
+
+//         $req->execute(array($categorie));
+
+//         $data = $req->fetchAll(PDO::FETCH_OBJ);
+//           return $data;
+//         }
+// 	}
+// }
 
 function supprimer($id)
 {

@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `minimarket`
+-- Database: `minimarket`
 --
 
 -- --------------------------------------------------------
@@ -36,7 +36,7 @@ CREATE TABLE `article` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `client`
+-- Table structure for table `client`
 --
 
 CREATE TABLE `client` (
@@ -50,7 +50,7 @@ CREATE TABLE `client` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commande`
+-- Table structure for table `commande`
 --
 
 CREATE TABLE `commande` (
@@ -62,7 +62,7 @@ CREATE TABLE `commande` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produit`
+-- Table structure for table `produit`
 --
 
 CREATE TABLE `produit` (
@@ -71,24 +71,25 @@ CREATE TABLE `produit` (
   `prix` int(11) NOT NULL,
   `description` varchar(90) DEFAULT NULL,
   `image` blob NOT NULL,
-  `quantite` int(11) NOT NULL
+  `quantite` int(11) NOT NULL,
+  `categories` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Déchargement des données de la table `produit`
+-- Dumping data for table `produit`
 --
 
-INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`) VALUES
-(2, 'seee', 5, 'dddd', 0x6c6f676f2e706e67, 5),
-(3, 'robes', 577, 'hhhhhhhhhhhhhhhhhhhsssssshhhh', 0x766574656d656e74696d616765362e6a7067, 4),
-(4, 'vetement', 7888, 'hahahahahahahahahaha', 0x696d616765392e706e67, 2);
+INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`, `categories`) VALUES
+(2, 'seee', 5, 'dddd', 0x6c6f676f2e706e67, 5, 'sport'),
+(3, 'robes', 577, 'hhhhhhhhhhhhhhhhhhhsssssshhhh', 0x766574656d656e74696d616765362e6a7067, 4, ''),
+(4, 'vetement', 7888, 'hahahahahahahahahaha', 0x696d616765392e706e67, 2, '');
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `article`
+-- Indexes for table `article`
 --
 ALTER TABLE `article`
   ADD PRIMARY KEY (`id_art`),
@@ -96,65 +97,65 @@ ALTER TABLE `article`
   ADD KEY `id_pr` (`id_pr`);
 
 --
--- Index pour la table `client`
+-- Indexes for table `client`
 --
 ALTER TABLE `client`
   ADD PRIMARY KEY (`id_cl`);
 
 --
--- Index pour la table `commande`
+-- Indexes for table `commande`
 --
 ALTER TABLE `commande`
   ADD PRIMARY KEY (`id_com`),
   ADD KEY `id_cl` (`id_cl`);
 
 --
--- Index pour la table `produit`
+-- Indexes for table `produit`
 --
 ALTER TABLE `produit`
   ADD PRIMARY KEY (`id_pr`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `article`
+-- AUTO_INCREMENT for table `article`
 --
 ALTER TABLE `article`
   MODIFY `id_art` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `client`
+-- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
   MODIFY `id_cl` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `commande`
+-- AUTO_INCREMENT for table `commande`
 --
 ALTER TABLE `commande`
   MODIFY `id_com` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT pour la table `produit`
+-- AUTO_INCREMENT for table `produit`
 --
 ALTER TABLE `produit`
   MODIFY `id_pr` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `article`
+-- Constraints for table `article`
 --
 ALTER TABLE `article`
   ADD CONSTRAINT `article_ibfk_1` FOREIGN KEY (`id_com`) REFERENCES `commande` (`id_com`),
   ADD CONSTRAINT `article_ibfk_2` FOREIGN KEY (`id_pr`) REFERENCES `produit` (`id_pr`);
 
 --
--- Contraintes pour la table `commande`
+-- Constraints for table `commande`
 --
 ALTER TABLE `commande`
   ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_cl`) REFERENCES `client` (`id_cl`);
