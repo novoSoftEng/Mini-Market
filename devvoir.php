@@ -36,20 +36,3 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Connexion</title>
-</head>
-<body>
-    <form method="post">
-        <label for="email">Adresse email:</label>
-        <input type="email" name="email" required>
-        <br>
-        <label for="motdepasse">Mot de passe:</label>
-        <input type="password" name="motdepasse" required>
-        <br>
-        <input type="submit" name="submit" value="se connecter">
-    </form>
-</body>
-</html>

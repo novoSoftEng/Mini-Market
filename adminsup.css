@@ -1,0 +1,37 @@
+nav{
+    background-color: rgba(41, 208, 255, 0.1);
+}
+
+.forme{
+    margin-top: 150px;
+  
+
+}
+body{
+    background-image: url("shopping1.jpg");
+}
+.col{
+    color: white;
+    font-style: oblique;
+}
+.col:hover{
+    color: blue;
+}
+.form-control{
+   background-color: rgba(41, 208, 255, 0.2);
+}
+.form-label{
+    font-family: Impact,'Arial Narrow Bold', sans-serif;
+}
+nav a{
+    margin-left: 50px;
+    color: black;
+}
+nav a:hover{
+    background-color: rgba(255, 132, 0, 0.2);
+border-radius: 50px;}
+.navbar-brand{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: x-large;
+    font-weight: 400;
+}
