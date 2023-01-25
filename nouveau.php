@@ -17,11 +17,11 @@ if (isset($_POST['submit'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['motdepasse'];
     
 
     // Insertion des informations d'inscription dans la base de données
-    $query = "INSERT INTO clients (nom, prenom, email, motdepasse) VALUES ('$nom', '$prenom', '$email', '$motdepasse')";
+    $query = "INSERT INTO client (nom, prenom, email, motdepasse) VALUES ('$nom', '$prenom', '$email', '$password')";
     if ($conn->query($query) === TRUE) {
         // Démarrez une session pour le nouveau client
         session_start();

@@ -78,17 +78,10 @@ CREATE TABLE `produit` (
 -- Dumping data for table `produit`
 --
 
-<<<<<<< HEAD
-INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`) VALUES
-(2, 'seee', 5, 'dddd', 0x6c6f676f2e706e67, 5),
-(3, 'robes', 577, 'hhhhhhhhhhhhhhhhhhhsssssshhhh', 0x766574656d656e74696d616765362e6a7067, 4),
-(4, 'vetement', 7888, 'hahahahahahahahahaha', 0x696d616765392e706e67, 2);
-=======
 INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`, `categories`) VALUES
 (2, 'seee', 5, 'dddd', 0x6c6f676f2e706e67, 5, 'sport'),
 (3, 'robes', 577, 'hhhhhhhhhhhhhhhhhhhsssssshhhh', 0x766574656d656e74696d616765362e6a7067, 4, ''),
 (4, 'vetement', 7888, 'hahahahahahahahahaha', 0x696d616765392e706e67, 2, '');
->>>>>>> main
 
 --
 -- Indexes for dumped tables
