@@ -17,11 +17,11 @@ if (isset($_POST['submit'])) {
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
-    $password = $_POST['password'];
+    $password = $_POST['motdepasse'];
     
 
     // Insertion des informations d'inscription dans la base de données
-    $query = "INSERT INTO clients (nom, prenom, email, motdepasse) VALUES ('$nom', '$prenom', '$email', '$motdepasse')";
+    $query = "INSERT INTO client (nom, prenom, email, motdepasse) VALUES ('$nom', '$prenom', '$email', '$password')";
     if ($conn->query($query) === TRUE) {
         // Démarrez une session pour le nouveau client
         session_start();
@@ -35,27 +35,4 @@ if (isset($_POST['submit'])) {
 }
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Inscription</title>
-</head>
-<body>
-    <form method="post">
-        <label for="nom">Nom:</label>
-        <input type="text" name="nom" required>
-        <br>
-        <label for="prenom">Prenom:</label>
-        <input type="text" name="prenom" required>
-        <br>
-        <label for="email">Adresse email:</label>
-        <input type="email" name="email" required>
-        <br>
-        <label for="motdepasse">Mot de passe:</label>
-        <input type="password" name="motdepasse" required>
-        <br>
-      
-        <input type="submit" name="submit" value="Inscription">
-    </form>
-</body>
-</html>
+
