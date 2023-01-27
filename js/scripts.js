@@ -13,3 +13,17 @@ function afficher(categorie){
 
     });
 }
+$(document).ready(function (){
+    $.ajax({
+        type: "POST",
+         url: './php/panier.php',
+        data: 'categorie=' + categorie,
+         success: function (produits) {
+             $("#categories_choisis").empty().html(produits);
+         },
+         error: function () {
+             alert("problem");
+         }
+ 
+     });
+});
