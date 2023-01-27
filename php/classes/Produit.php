@@ -16,7 +16,6 @@ class Produit {
 $user='root';
 $psswd='';
 $conn = new PDO($host,$user,$psswd);
-    require('Article.php');
     $this->nom=$nom;
     $this->prix=$prix;
     $this->description=$description;
@@ -27,10 +26,6 @@ $conn = new PDO($host,$user,$psswd);
     $query->execute([$nom,$prix,$description,$image,$quantite,$categorie]);
     
     $this->id_pr = $conn->lastInsertId();
-    for($i=0;$i<$quantite;$i++){
-      $article = new Article();
-      $article->insert($this->id_pr);
-    }
   }
  function select_id($id){
     require("../conn.php");
