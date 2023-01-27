@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
         // Redirigez le nouveau client vers la page d'accueil
         header("Location: index.html");
     } else {
-        echo "Error: " . $query . "<br>" . $conn->error;
+      //  echo "Error: " . $query . "<br>" . $conn->error();
     }
 }
 ?>
