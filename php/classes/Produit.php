@@ -10,6 +10,27 @@ class Produit {
   protected $categorie;
 
   // Method
+  function get_id(){
+    return $this->id_pr;
+  }
+  function get_nom(){
+    return $this->nom;
+  }
+  function get_prix(){
+    return $this->prix;
+  }
+  function get_description(){
+    return $this->description;
+  }
+  function get_image(){
+    return $this->nom;
+  }
+  function get_quantite(){
+    return $this->quantite;
+  }
+  function get_categorie(){
+    return $this->categorie;
+  }
   function insert($nom, $prix,$description,$image,$quantite,$categorie){
    // require_once("php/conn.php");
    $host='mysql:host=localhost;dbname=minimarket';
