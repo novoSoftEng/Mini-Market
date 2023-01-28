@@ -22,7 +22,57 @@ if(empty($_SESSION["panier"])){
                 <!-- Core theme JS-->
                 <script src="jquery.min.js"></script>
                 <script src="./js/scripts.js"></script>
+ <style>
+ section li {
+    padding: 0;
+    margin: 0;
+    float:right;
+    margin-right: 30px;
+}
+section li{
+    /* background:#c4bab000; */
+    position:relative ;
+    list-style: none;
+    display: inline-block;
+}
+section li a{
+    display: block;
+    padding: 0px 15px;
+    color:darkgray;
+    /* color: #b80f0f; */
+    text-decoration:none;
+    line-height: 60px;
+    font-size: 18px;
+}
+section li a:hover{
+   
+    cursor: pointer;
+    color: darkgray;
+}
+section ul {
+    position: absolute;
+    top: 60px; 
+    display: none; 
+}
 
+.g1{
+    border-radius: 15px;
+     background-color:antiquewhite;
+     outline: none;
+     display: none;
+    position: absolute;
+    z-index: 8;
+    width: 300px;
+    height: 400px;
+}
+/* section ul li a{
+    font-size: 13px;
+    line-height: 25px;
+} */
+section li:hover >ul{
+    display: block;
+}
+ </style>
 
     </head>
     <body onload="addCart()">
@@ -51,7 +101,22 @@ if(empty($_SESSION["panier"])){
                     </ul>
                            
                  </ul>
-                
+                 <section>
+        
+                          <li>
+                            <!-- <a href="#">panier</a> -->
+                            <form class="d-flex">
+                                <button class="btn btn-outline-dark" type="submit">
+                                    <i class="bi-cart-fill me-1"></i>
+                                     Cart
+                                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                                </button>
+                             </form>
+                                 <ul class="g1" >
+                                 hhhshshshshhshshhshshhshhshsh
+                                </ul>
+                            </li>      
+                 </section>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
