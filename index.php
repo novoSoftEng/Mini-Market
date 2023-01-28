@@ -1,3 +1,11 @@
+<?php
+include('./php/classes/Panier.php');
+session_start();
+
+if(empty($_SESSION["panier"])){
+    $_SESSION["panier"] = new Panier();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,17 +16,16 @@
         <title>Shop Homepage - Start Bootstrap Template</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         
                 <!-- Core theme JS-->
-                <script src="js/scripts.js"></script>
                 <script src="jquery.min.js"></script>
+                <script src="./js/scripts.js"></script>
+
 
     </head>
-    <body>
+    <body onload="addCart()">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -49,7 +56,7 @@
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="toltalPanier">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="panierQnt"></span>
                         </button>
                     </form>
                 </div>
@@ -272,8 +279,6 @@
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>
