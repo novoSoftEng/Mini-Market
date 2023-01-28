@@ -1,3 +1,11 @@
+<?php
+include('./php/classes/Panier.php');
+session_start();
+
+if(empty($_SESSION["panier"])){
+    $_SESSION["panier"] = new Panier();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,17 +16,66 @@
         <title>Shop Homepage - Start Bootstrap Template</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         
                 <!-- Core theme JS-->
-                <script src="js/scripts.js"></script>
                 <script src="jquery.min.js"></script>
+                <script src="./js/scripts.js"></script>
+ <style>
+ section li {
+    padding: 0;
+    margin: 0;
+    float:right;
+    margin-right: 30px;
+}
+section li{
+    /* background:#c4bab000; */
+    position:relative ;
+    list-style: none;
+    display: inline-block;
+}
+section li a{
+    display: block;
+    padding: 0px 15px;
+    color:darkgray;
+    /* color: #b80f0f; */
+    text-decoration:none;
+    line-height: 60px;
+    font-size: 18px;
+}
+section li a:hover{
+   
+    cursor: pointer;
+    color: darkgray;
+}
+section ul {
+    position: absolute;
+    top: 60px; 
+    display: none; 
+}
+
+.g1{
+    border-radius: 15px;
+     background-color:antiquewhite;
+     outline: none;
+     display: none;
+    position: absolute;
+    z-index: 8;
+    width: 300px;
+    height: 400px;
+}
+/* section ul li a{
+    font-size: 13px;
+    line-height: 25px;
+} */
+section li:hover >ul{
+    display: block;
+}
+ </style>
 
     </head>
-    <body>
+    <body onload="addCart()">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
@@ -44,12 +101,27 @@
                     </ul>
                            
                  </ul>
-                
+                 <section>
+        
+                          <li>
+                            <!-- <a href="#">panier</a> -->
+                            <form class="d-flex">
+                                <button class="btn btn-outline-dark" type="submit">
+                                    <i class="bi-cart-fill me-1"></i>
+                                     Cart
+                                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                                </button>
+                             </form>
+                                 <ul class="g1" >
+                                 hhhshshshshhshshhshshhshhshsh
+                                </ul>
+                            </li>      
+                 </section>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="panierQnt"></span>
                         </button>
                     </form>
                 </div>
@@ -58,7 +130,7 @@
         <!-- Header-->
         <header>
             <div>
-                <img src="vetement/AC.jpg" alt="..."  width="1350px">
+                <img src="vetement/AC.jpg" alt="..."  width="1260px">
             </div>
         </header>
         <!-- Section-->
@@ -272,8 +344,6 @@
         <footer class="py-5 bg-dark">
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
         </footer>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>
 </html>

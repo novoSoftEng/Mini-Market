@@ -13,3 +13,20 @@ function afficher(categorie){
 
     });
 }
+
+
+function addCart(id_pr){
+    $.ajax({
+        type: "POST",
+         url: './php/panier.php',
+        data: 'id_pr=' + id_pr,
+         success: function (qnt) {
+             console.log("succes");
+            $("#panierQnt").empty().html(qnt);
+         },
+         error: function () {
+             alert("problem");
+         }
+ 
+     });
+}

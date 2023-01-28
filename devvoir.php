@@ -41,9 +41,23 @@ if (isset($_POST['submit'])) {
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="client.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Sign in & Sign up Form</title>
+    <style>
+        .fttt {
+  width: 365px;
+  background-color:bisque;
+  border: none;
+  height: 40px;
+  padding: 5px;
+  border-radius: 49px;
+  color: red;
+  text-transform:lowercase;
+ 
+}
+
+    </style>
   </head>
   <body>
     <div class="container">
@@ -60,7 +74,7 @@ if (isset($_POST['submit'])) {
               <input type="password" placeholder="Password"name="motdepasse" />
             </div>
             <input type="submit" name="submit" value="se connecter" class="btn solid" />
-            <p class="alert alert-danger"> <?php echo "erreur ! le mot de pass ou email et incorect" ?></p>
+            <p class="fttt"> erreur ! le mot de pass ou email et incorect</p>
             <p class="social-text">ou connectez-vous avec les plateformes sociales</p>
             <div class="social-media">
               <a href="https://fr-fr.facebook.com/.com" class="social-icon">

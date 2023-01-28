@@ -10,13 +10,33 @@ class Produit {
   protected $categorie;
 
   // Method
+  function get_id(){
+    return $this->id_pr;
+  }
+  function get_nom(){
+    return $this->nom;
+  }
+  function get_prix(){
+    return $this->prix;
+  }
+  function get_description(){
+    return $this->description;
+  }
+  function get_image(){
+    return $this->nom;
+  }
+  function get_quantite(){
+    return $this->quantite;
+  }
+  function get_categorie(){
+    return $this->categorie;
+  }
   function insert($nom, $prix,$description,$image,$quantite,$categorie){
    // require_once("php/conn.php");
    $host='mysql:host=localhost;dbname=minimarket';
 $user='root';
 $psswd='';
 $conn = new PDO($host,$user,$psswd);
-    require('Article.php');
     $this->nom=$nom;
     $this->prix=$prix;
     $this->description=$description;
@@ -27,10 +47,6 @@ $conn = new PDO($host,$user,$psswd);
     $query->execute([$nom,$prix,$description,$image,$quantite,$categorie]);
     
     $this->id_pr = $conn->lastInsertId();
-    for($i=0;$i<$quantite;$i++){
-      $article = new Article();
-      $article->insert($this->id_pr);
-    }
   }
  function select_id($id){
     require("../conn.php");
