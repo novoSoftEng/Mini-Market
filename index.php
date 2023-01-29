@@ -31,7 +31,7 @@ if (empty($_SESSION["panier"])) {
             padding: 0;
             margin: 0;
             float: right;
-            margin-right: 30px;
+            margin-right: 20px;
         }
 
         section li {
@@ -43,11 +43,11 @@ if (empty($_SESSION["panier"])) {
 
         section li a {
             display: block;
-            padding: 0px 15px;
+            /* padding: 0px 15px; */
             color: darkgray;
             /* color: #b80f0f; */
             text-decoration: none;
-            line-height: 60px;
+            /* line-height: 60px; */
             font-size: 18px;
         }
 
@@ -59,7 +59,7 @@ if (empty($_SESSION["panier"])) {
 
         section ul {
             position: absolute;
-            top: 40px;
+            top: 25px;
             display: none;
         }
 
@@ -70,7 +70,7 @@ if (empty($_SESSION["panier"])) {
             display: none;
             position: absolute;
             z-index: 8;
-            width: 400px;
+            width: 300px;
             height: 400px;
             right: 7px;
         }
@@ -85,11 +85,24 @@ if (empty($_SESSION["panier"])) {
             height: 300px;
             right: 7px;
         }
+        .g3 {
+            border-radius: 15px;
+            background-color: antiquewhite;
+            outline: none;
+            display: none;
+            position: absolute;
+            z-index: 8;
+            width: auto;
+            height: auto;
+            text-align: center;
+            /* font-weight: 80px; */
+            right: 7px;
+        }
 
-        /* section ul li a{
-    font-size: 13px;
-    line-height: 25px;
-} */
+        section ul li a{
+            font-size: 13px;
+            line-height: 25px;
+            }     
         section li:hover>ul {
             display: block;
         }
@@ -110,9 +123,9 @@ if (empty($_SESSION["panier"])) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item "><a class="nav-link " aria-current="page" href="index.php">Accciel</a></li>
+                    
+                    
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
@@ -134,13 +147,30 @@ if (empty($_SESSION["panier"])) {
             <section>
                
                <li> 
-                   <a href="#">About</a>
+                   <a href="#">À propos de nous </a>
 
                    <ul class="g2" >
                    Mini Market est un détaillant électronique national de mode et de style de vie qui s'engage à rendre la beauté de la mode accessible à tous. Nous utilisons une technologie de fabrication à la demande pour connecter les fournisseurs à notre chaîne d'approvisionnement agile, réduisant ainsi le gaspillage des stocks et nous permettant de livrer une variété de produits abordables aux clients. Depuis nos bureaux , nous touchons des clients dans tous les villes dans le Maroc.
                    </ul>
                </li>
        </section>
+       <section>
+           
+                  <li>
+                    <a href="#">Categories</a>
+                    <ul class="g3" >
+                        <li ><a href="#">Robes</a></li>
+                        <li ><a href="#">Casual</a></li>
+                        <li ><a href="#">Sport</a></li>
+                        <li ><a href="#">Classy</a></li>
+                        <li ><a href="#">Bijoux</a></li>
+                        <li ><a href="#">Maison</a></li>
+                        <li ><a href="#">Nourriture</a></li>
+                        <li ><a href="#">Technologie</a></li>
+                    </ul>
+                   </li>
+            
+            </section>
             <section>
                 <div class="d-flex">
                     <li> <button class="btn btn-outline-dark btn-secondary" type="button">
