@@ -14,6 +14,10 @@ class Panier
   {
     return $this->qnt;
   }
+  function get_total()
+  {
+    return $this->total;
+  }
   function addCart($id_pr)
   {
    if(!empty($id_pr)){
@@ -21,9 +25,22 @@ class Panier
       $Array = array("'$id_pr'" => 1);
       $this->panierArray = array_merge($this->panierArray, $Array);
       $this->qnt= array_sum($this->panierArray);
+        $produit = new Produit();
+        $this->total=0;
+        foreach($this->panierArray as $key=>$value){
+          $produit->select_id(trim($key,"'"));
+          $this->total += $produit->get_prix() * $this->panierArray[$key];
+        }
+       
     }else if(in_array("'$id_pr'",array_keys($this->panierArray))){
       $this->panierArray["'$id_pr'"] += 1;
       $this->qnt= array_sum($this->panierArray);
+      $produit = new Produit();
+      $this->total=0;
+      foreach($this->panierArray as $key=>$value){
+        $produit->select_id(trim($key,"'"));
+        $this->total += $produit->get_prix() * $this->panierArray[$key];
+      }
     }}
   }
   function delete($id_pr){
