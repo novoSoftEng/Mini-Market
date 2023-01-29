@@ -23,9 +23,12 @@ $produits = new Produit();
                     </div>
                 </div>
                 <!-- Product actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
-                </div
+                <form action="./php/product_details.php" method="POST" >
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <input type="hidden" name="idpr" value="'.$produit->id_pr.'"/>
+                        <div class="text-center"><input class="btn btn-outline-dark mt-auto" type="submit" value="view details" /></div>
+                    </div>
+                </form>
             </div>
         </div>' ;
        
