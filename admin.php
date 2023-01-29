@@ -1,8 +1,8 @@
 <?php
 session_start();
-
+require('./php/conn.php');
 require("php/commande.php");
-
+require('php/classes/Produit.php');
 if(!isset($_SESSION['htovxcracf2242']))
 {
     header("Location: login.php");
@@ -14,6 +14,7 @@ if(empty($_SESSION['htovxcracf2242']))
 }
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,13 +41,15 @@ if(empty($_SESSION['htovxcracf2242']))
         <i class="fas fa-bars" style="color:white"></i> 
     </div>
         <div class="container px-4 px-lg-5">
-            <a class="navbar-brand "  style="margin-left: 100px; font-family: Georgia, 'Times New Roman', Times, serif; color:white">YCA Market HI</a>
+            <a class="navbar-brand "  style="margin-left: 100px; font-family: Georgia, 'Times New Roman', Times, serif; color:white">Mini Market</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="admin.php"style="color:white">accueil</a></li>
-                    <li class="nav-item"><a class="nav-link"  style="color:white" >Ajouter</a></li>
-                    <li class="nav-item"><a class="nav-link" href="page2.php" style="color:white">tous les Produits</a></li>
+                    <li class="nav-item"><a class="nav-link"  style="color:white" style="font-weight: bold;" >Ajouter</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adminsupp.php" style="color:white">supprimer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="adminmodifier.php" style="color:white">modifier</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page2.php" style="color:white">Produits</a></li>
                     <li class="nav-item"><a class="nav-link" href="deconnexion.php" style="color:white">se deconnecter</a></li>
                 </ul>
                 <form class="d-flex">
@@ -85,7 +88,7 @@ if(empty($_SESSION['htovxcracf2242']))
     </div>          
 
         <section id="section2">
-        <form action="./php/addProduct.php" id="form1" method="post" enctype="multipart/form-data">
+     <form   id="form1" method="post" enctype="multipart/form-data">
         <div class="form-group">    
              <label for="">Nom de produit :</label> 
        <input type="text" placeholder="entrer le nom de produit" class="form-control" name="nom">
@@ -108,6 +111,10 @@ if(empty($_SESSION['htovxcracf2242']))
                 <label for="">Quantite :</label>
                <input type="number" placeholder="entrer la quantité de produit" class="form-control" name="quantite"><br>
                </div>
+               <div class="formm-group"> 
+        <label for="">categorie :</label>
+        <input type="text" placeholder="entrer la categorie de produit" class="form-control" name="categorie">
+    </div>
          <div class="form-group"> 
             <input type="submit" value="Ajouter" class="form-control btn btn-outline-primary text-white"  name="submit">
         </div>
@@ -130,3 +137,36 @@ if(empty($_SESSION['htovxcracf2242']))
     <script src="admin.js"></script>
 </body>
 </html>
+
+<?php
+
+  if(isset($_POST['submit']))
+  {
+
+
+          try 
+          {
+            	    	
+	    	$nom = htmlspecialchars(strip_tags($_POST['nom']));
+	    	$prix =$_POST['prix'];
+	    	$quantite = $_POST['quantite'];
+            $description = htmlspecialchars(strip_tags($_POST['description']));
+            $categorie = htmlspecialchars(strip_tags($_POST['categorie']));
+            $filename = $_FILES["image"]["name"];
+
+    $tempname = $_FILES["image"]["tmp_name"];  
+
+        $image = "vetement/".$filename;
+    move_uploaded_file($tempname, $image);
+              $produit = new Produit();
+       $produit->insert($nom, $prix, $description, $image, $quantite,$categorie);
+           // ajouter($nom, $prix,$quantite,$description);
+            
+          } 
+          catch (Exception $e) 
+          {
+          	$e->getMessage();
+          }
+
+	    }
+?>

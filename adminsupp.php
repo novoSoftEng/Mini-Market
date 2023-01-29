@@ -24,43 +24,39 @@ $Produits=afficher();
 <head>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-   
+<link rel="stylesheet" href="adminsup.css">
+
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 	<title></title>
 </head>
 <body>
 
     <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-light ">  
-        <div class="menu-btn">
-        <i class="fas fa-bars"></i> 
+    <nav class="navbar navbar-expand-lg navbar-light ">
+<div class="container">
+<a class="navbar-brand" href="index.html">Mini Market</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+        <a class="nav-link active "  aria-current="page" href="adminaff.php" style="font-weight: bold;">Produits</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="admin.php" style="font-weight: bold;">Nouveau</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active "style="font-weight: bold;" href="adminsupp.php">Suppression</a>
+        </li>
+        
+        
+    </ul>
+    
+    <a class="btn btn-danger d-flex" style="display: flex; justify-content: flex-end;" href="deconnexion.php">Se deconnecter</a>
     </div>
-        <div class="container px-4 px-lg-5">
-            <a class="navbar-brand "  style="margin-left: 100px; font-family: Georgia, 'Times New Roman', Times, serif;">YCA Market HI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="admin.php">accueil</a></li>
-                    <li class="nav-item"><a class="nav-link" href="adminsupp.php">supprimer</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Produits</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="page2.php">All Products</a></li>
-                            <li><hr class="dropdown-divider" /></li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="deconnexion.php">se deconnecter</a></li>
-                </ul>
-                <form class="d-flex">
-                    <button class="btn btn-outline-dark" type="submit">
-                        Admin
-                    </button>
-                </form>
-            </div>
-        </div>
-    </nav>
+</div>
+</nav>
 
 
 
@@ -68,7 +64,7 @@ $Produits=afficher();
 
 
 
-  <div class="album py-5 bg-light">
+  <div class="forme">
     <div class="container">
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -77,12 +73,12 @@ $Produits=afficher();
   <div class="mb-3">
 
    <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Identifiant du produit</label>
+    <label for="exampleInputPassword1" class="form-label ">Identifiant du produit</label>
 
     <input type="number" class="form-control" name="idproduit" required>
   </div>
 
-  <button type="submit" name="valider" class="btn btn-primary">Supprimer le produit</button>
+  <button type="submit" name="valider" class="btn btn-primary shadow text-dark" style="font-weight: bold;" >Supprimer le produit</button>
 </form>
 
       </div>
@@ -92,7 +88,7 @@ $Produits=afficher();
   
         <?php foreach($Produits as $produit): ?> 
         <div class="col">
-          <div class="card shadow-sm">
+          <div class="card shadow bg-dark">
             
             <img src="<?= $produit->image ?>">
 

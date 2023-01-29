@@ -1,37 +1,4 @@
-<?php
-// Connexion à la base de données
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "minimarket";
-
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Vérifiez si la connexion a échoué
-if ($conn->connect_error) {
-    die("Connexion échouée: " . $conn->connect_error);
-}
-
-if (isset($_POST['submit'])) {
-    // Récupération des informations de connexion
-    $email = $_POST['email'];
-    $motdepasse = $_POST['motdepasse'];
-
-    // Sélection de l'utilisateur correspondant dans la base de données
-    $query = "SELECT * FROM client WHERE email='$email' AND motdepasse='$motdepasse'";
-    $result = $conn->query($query);
-
-    // Vérifiez si l'utilisateur existe
-    if ($result->num_rows > 0) {
-        // Démarrez une session pour l'utilisateur
-        session_start();
-        $_SESSION['email'] = $email;
-
-        // Redirigez l'utilisateur vers la page d'accueil
-        header("Location: index.html");
-    } else {
-        ?>
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,23 +8,7 @@ if (isset($_POST['submit'])) {
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="client.css" />
-   
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <title>Sign in & Sign up Form</title>
-    <style>
-        .fttt {
-  width: 365px;
-  background-color:bisque;
-  border: none;
-  height: 40px;
-  padding: 5px;
-  border-radius: 49px;
-  color: red;
-  text-transform:lowercase;
- 
-}
-
-    </style>
   </head>
   <body>
     <div class="container">
@@ -74,7 +25,6 @@ if (isset($_POST['submit'])) {
               <input type="password" placeholder="Password"name="motdepasse" />
             </div>
             <input type="submit" name="submit" value="se connecter" class="btn solid" />
-            <p class="fttt"> erreur ! le mot de pass ou email et incorect</p>
             <p class="social-text">ou connectez-vous avec les plateformes sociales</p>
             <div class="social-media">
               <a href="https://fr-fr.facebook.com/.com" class="social-icon">
@@ -162,8 +112,3 @@ if (isset($_POST['submit'])) {
     <script src="client.js"></script>
   </body>
 </html>
-        <?php
-    }
-}
-?>
-
