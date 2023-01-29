@@ -4,6 +4,7 @@ class Panier
 {
   protected $panierArray = array();
   protected $qnt=0;
+  protected $total=0;
   //methode
   function get_panierArray()
   {

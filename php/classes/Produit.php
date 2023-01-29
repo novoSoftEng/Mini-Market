@@ -23,7 +23,7 @@ class Produit {
     return $this->description;
   }
   function get_image(){
-    return $this->nom;
+    return $this->image;
   }
   function get_quantite(){
     return $this->quantite;
@@ -63,7 +63,7 @@ $conn = new PDO($host,$user,$psswd);
    $this->description=$data->description;
    $this->image=$data->image;
    $this->quantite=$data->quantite;
-   $this->categorie=$data->categorie;
+   $this->categorie=$data->categories;
  }
  function afficher_cat($categorie)
 {

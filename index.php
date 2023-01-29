@@ -86,7 +86,7 @@ if (empty($_SESSION["panier"])) {
 
 </head>
 
-<body onload="showCart()">
+<body onload="showCart();cartContent()">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
@@ -119,7 +119,7 @@ if (empty($_SESSION["panier"])) {
 
 
             <section>
-                <div class="d-flex" onhover="cartContent()">
+                <div class="d-flex">
                     <li> <button class="btn btn-outline-dark btn-secondary" type="button">
                             <i class="bi-cart-fill me-1">Cart</i>
                             <span class="badge bg-dark text-white ms-1 rounded-pill" id="panierQnt"></span>

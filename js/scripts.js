@@ -29,6 +29,7 @@ function addCart(id_pr){
          }
  
      });
+     cartContent();
 }
 function showCart(){
     $.ajax({
