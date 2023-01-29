@@ -51,7 +51,7 @@ section li a:hover{
 }
 section ul {
     position: absolute;
-    top: 60px; 
+    top: 30px; 
     display: none; 
 }
 
@@ -65,10 +65,10 @@ section ul {
     width: 300px;
     height: 400px;
 }
-/* section ul li a{
+section ul li a{
     font-size: 13px;
     line-height: 25px;
-} */
+}
 section li:hover >ul{
     display: block;
 }
