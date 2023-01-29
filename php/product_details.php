@@ -10,7 +10,7 @@ if(isset($_POST['idpr'])){
 
 
     $_SESSION['row'] = $row;
-    header("Location: /Mini-Market/php/details.php");
+    header("Location: details.php");
 }
 
 ?>
