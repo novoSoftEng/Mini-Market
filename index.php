@@ -246,7 +246,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -271,7 +271,7 @@ if (empty($_SESSION["panier"])) {
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center" onclick="afficher('sport')"><a class="btn btn-outline-dark mt-auto"
-                                    href="#">Add to cart</a></div>
+                                    href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
@@ -298,7 +298,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -322,7 +322,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -374,7 +374,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -402,7 +402,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a>
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,6 @@ if (empty($_SESSION["panier"])) {
             <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
         </div>
     </footer>
-
 </body>
 
 </html>

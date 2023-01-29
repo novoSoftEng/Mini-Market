@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 28, 2023 at 12:40 PM
+-- Generation Time: Jan 29, 2023 at 02:55 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -73,8 +73,20 @@ INSERT INTO `client` (`id_cl`, `nom`, `prenom`, `email`, `motdepasse`) VALUES
 CREATE TABLE `commande` (
   `id_com` int(10) UNSIGNED NOT NULL,
   `id_cl` int(10) UNSIGNED DEFAULT NULL,
-  `total` int(10) UNSIGNED NOT NULL
+  `total` int(10) UNSIGNED NOT NULL,
+  `qnt` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `commande`
+--
+
+INSERT INTO `commande` (`id_com`, `id_cl`, `total`, `qnt`) VALUES
+(1, 1, 10, 1),
+(2, 1, 10, 1),
+(3, 1, 70, 3),
+(4, 1, 30, 3),
+(5, 1, 10, 1);
 
 -- --------------------------------------------------------
 
@@ -124,6 +136,18 @@ CREATE TABLE `qntcommande` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
+-- Dumping data for table `qntcommande`
+--
+
+INSERT INTO `qntcommande` (`id_qnt`, `id_com`, `id_pr`, `total`, `qnt`) VALUES
+(1, 2, 8, 0, 1),
+(2, 3, 10, 0, 1),
+(3, 3, 8, 0, 1),
+(4, 3, 6, 0, 1),
+(5, 4, 9, 0, 3),
+(6, 5, 8, 10, 1);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -168,7 +192,7 @@ ALTER TABLE `client`
 -- AUTO_INCREMENT for table `commande`
 --
 ALTER TABLE `commande`
-  MODIFY `id_com` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_com` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `produit`
@@ -180,7 +204,7 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT for table `qntcommande`
 --
 ALTER TABLE `qntcommande`
-  MODIFY `id_qnt` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_qnt` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

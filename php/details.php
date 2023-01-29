@@ -1,6 +1,93 @@
+<?php
+include('./classes/Panier.php');
+session_start();
 
+if (empty($_SESSION["panier"])) {
+    $_SESSION["panier"] = new Panier();
+}
+if(empty($_SESSION["id_cl"])){
+    $_SESSION["id_cl"] = 1;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/Mini-Market/css/styles.css" rel="stylesheet" />
+    <link href="/Mini-Market/css/product_card.css" rel="stylesheet" />
+    <link href="/Mini-Market/css/bootstrap.css" rel="stylesheet" />
+    <!-- Core theme JS-->
+    <script src="./jquery.min.js"></script>
+    <script src="/Mini-Market/js/scripts.js"></script>
+    <script src="/Mini-Market/js/bootstrap.js"></script>
+
+    <style>
+        section li {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 30px;
+        }
+
+        section li {
+            /* background:#c4bab000; */
+            position: relative;
+            list-style: none;
+            display: inline-block;
+        }
+
+        section li a {
+            display: block;
+            padding: 0px 15px;
+            color: darkgray;
+            /* color: #b80f0f; */
+            text-decoration: none;
+            line-height: 60px;
+            font-size: 18px;
+        }
+
+        section li a:hover {
+
+            cursor: pointer;
+            color: darkgray;
+        }
+
+        section ul {
+            position: absolute;
+            top: 35px;
+            display: none;
+        }
+
+        .g1 {
+            border-radius: 15px;
+            background-color: antiquewhite;
+            outline: none;
+            display: none;
+            position: absolute;
+            z-index: 8;
+            width: 300px;
+            height: 400px;
+            right: 7px;
+        }
+
+        /* section ul li a{
+    font-size: 13px;
+    line-height: 25px;
+} */
+        section li:hover>ul {
+            display: block;
+        }
+    </style>
+</head>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -12,56 +99,70 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/Mini-Market/css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/Mini-Market/css/product_card.css">
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/product_card.css"/>
                 <!-- Core theme JS-->
-                <script src="/Mini-Market/js/scripts.js"></script>
-                <script src="/Mini-Market/jquery.min.js"></script>
+                <script src="jquery.min.js"></script>
+                <script src="./js/scripts.js"></script>
+                <script src="./js/bootstrap.js"></script>
                
-    <body>
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container px-4 px-lg-5">
-                <img src="logo.png"width="60" hight="auto" alt="">
-                <a class="navbar-brand " href="#!">Mini Market</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto ">
-                        <li class="nav-item "><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="login.php">connexion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="client.html">se connecter</a></li>
-                        
-                    </ul>
-                    <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
-                            <i class="bi-cart-fill me-1"></i>
-                            Cart
-                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
-                    </form>
-                </div>
+<body onload="showCart();cartContent()">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <img src="logo.png" width="60" hight="auto" alt="">
+            <a class="navbar-brand " href="#!">Mini Market</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="../index.php">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#!">All Products</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
+                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../login.php">connexion</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../client.html">se connecter</a></li>
+
+                </ul>
             </div>
-        </nav>
-        <?php
-            session_start();
-         ?>
+
+
+            <section>
+                <div class="d-flex">
+                    <li> <button class="btn btn-outline-dark btn-secondary" type="button">
+                            <i class="bi-cart-fill me-1">Cart</i>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="panierQnt"></span>
+                        </button>
+
+                        <ul class="g1" id="cartContent">
+                            hhhshshshshhshshhshshhshhshsh
+                        </ul>
+                    </li>
+            </section>
+
+        </div>
+        </div>
+        </div>
+    </nav>
+        
         <div class="doc"></div>
         <section class="product">
 	        <div class="product__photo">
 		        <div class="photo-container">
 			        <div class="photo-main">
 				       <?php
-                            echo '<img src="/Mini-Market/vetement/'.$_SESSION['row']['image'].'">'
+                            echo '<img src="../'.$_SESSION['row']['image'].'">'
                        ?>
 			        </div>
 		         </div>
