@@ -59,7 +59,7 @@ if (empty($_SESSION["panier"])) {
 
         section ul {
             position: absolute;
-            top: 60px;
+            top: 40px;
             display: none;
         }
 
@@ -69,15 +69,27 @@ if (empty($_SESSION["panier"])) {
             outline: none;
             display: none;
             position: absolute;
-            z-index: 8;
-            width: 300px;
+            z-index: 1;
+            width: 400px;
             height: 400px;
+            right: 0px;
+        }
+        .g2 {
+            border-radius: 15px;
+            background-color: antiquewhite;
+            outline: none;
+            display: none;
+            position: absolute;
+            z-index: 8;
+            width: 360px;
+            height: 300px;
+            right: 7px;
         }
 
-        /* section ul li a{
+        section ul li a{
     font-size: 13px;
-    line-height: 25px;
-} */
+    /* line-height: 25px; */
+}
         section li:hover>ul {
             display: block;
         }
@@ -96,9 +108,11 @@ if (empty($_SESSION["panier"])) {
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
                 <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+
+                   
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
@@ -117,7 +131,16 @@ if (empty($_SESSION["panier"])) {
                 </ul>
             </div>
 
+            <section>
+               
+               <li> 
+                   <a href="#!" >About</a>
 
+                   <ul class="g2" >
+                   Mini Market est un détaillant électronique national de mode et de style de vie qui s'engage à rendre la beauté de la mode accessible à tous. Nous utilisons une technologie de fabrication à la demande pour connecter les fournisseurs à notre chaîne d'approvisionnement agile, réduisant ainsi le gaspillage des stocks et nous permettant de livrer une variété de produits abordables aux clients. Depuis nos bureaux , nous touchons des clients dans tous les villes dans le Maroc.
+                   </ul>
+               </li>
+       </section>
             <section>
                 <div class="d-flex">
                     <li> <button class="btn btn-outline-dark btn-secondary" type="button">
