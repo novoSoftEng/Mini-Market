@@ -2,17 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
-<<<<<<< HEAD
 -- Hôte : 127.0.0.1
 -- Généré le : lun. 23 jan. 2023 à 13:04
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.1.12
-=======
--- Host: localhost
--- Generation Time: Jan 28, 2023 at 12:40 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
->>>>>>> main
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -31,7 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Structure de la table `article`
 --
 
@@ -40,33 +32,11 @@ CREATE TABLE `article` (
   `id_com` int(10) UNSIGNED DEFAULT NULL,
   `id_pr` int(10) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-=======
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `pseudo` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `motdepasse` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`id`, `pseudo`, `email`, `motdepasse`) VALUES
-(55, 'nous', 'nous@admin.com', 'nousminimarket#1234');
->>>>>>> main
 
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Structure de la table `client`
-=======
--- Table structure for table `client`
->>>>>>> main
 --
 
 CREATE TABLE `client` (
