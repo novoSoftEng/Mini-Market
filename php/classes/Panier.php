@@ -15,7 +15,7 @@ class Panier
   }
   function addCart($id_pr)
   {
-   // $produitsPanier = array_keys($session);
+   if(!empty($id_pr)){
     if (!in_array("'$id_pr'", array_keys($this->panierArray))) {
       $Array = array("'$id_pr'" => 1);
       $this->panierArray = array_merge($this->panierArray, $Array);
@@ -23,8 +23,11 @@ class Panier
     }else if(in_array("'$id_pr'",array_keys($this->panierArray))){
       $this->panierArray["'$id_pr'"] += 1;
       $this->qnt= array_sum($this->panierArray);
-    }
+    }}
   }
-
+  function delete($id_pr){
+    unset($this->panierArray["'$id_pr'"]);
+  }
+  
 }
 ?>

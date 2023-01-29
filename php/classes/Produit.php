@@ -49,8 +49,11 @@ $conn = new PDO($host,$user,$psswd);
     $this->id_pr = $conn->lastInsertId();
   }
  function select_id($id){
-    require("../conn.php");
-    $req=$access->prepare("SELECT * FROM produit WHERE id_pr=?");
+  $host='mysql:host=localhost;dbname=minimarket';
+  $user='root';
+  $psswd='';
+  $conn = new PDO($host,$user,$psswd);
+    $req=$conn->prepare("SELECT * FROM produit WHERE id_pr=?");
 
       $req->execute([$id]);
       $data = $req->fetch(PDO::FETCH_OBJ);
