@@ -1,5 +1,7 @@
 <?php
 require_once('Produit.php');
+require_once('Commande.php');
+require_once('Qntcommande.php');
 class Panier
 {
   protected $panierArray = array();
@@ -45,6 +47,17 @@ class Panier
   }
   function delete($id_pr){
     unset($this->panierArray["'$id_pr'"]);
+  }
+  function valide($id_cl){
+    $commande = new Commande();
+    $commande->addToCom($id_cl, $this->qnt, $this->total);
+    foreach($this->panierArray as $key=>$value){
+      $qntcommande = new Qntcommande();
+      $qntcommande->add(trim($key, "'"),$commande->get_id(),$value);
+    }
+    $this->panierArray = array();
+    $this->qnt=0;
+    $this->total=0;
   }
   
 }
