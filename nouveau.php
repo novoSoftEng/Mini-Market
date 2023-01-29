@@ -1,16 +1,6 @@
 <?php
 // Connexion à la base de données
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "minimarket";
-
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Vérifiez si la connexion a échoué
-if ($conn->connect_error) {
-    die("Connexion échouée: " . $conn->connect_error);
-}
+require_once('./php/conn.php');
 
 if (isset($_POST['submit'])) {
     // Récupération des informations d'inscription
@@ -30,7 +20,7 @@ if (isset($_POST['submit'])) {
         // Redirigez le nouveau client vers la page d'accueil
         header("Location: index.html");
     } else {
-        echo "Error: " . $query . "<br>" . $conn->error;
+      //  echo "Error: " . $query . "<br>" . $conn->error();
     }
 }
 ?>

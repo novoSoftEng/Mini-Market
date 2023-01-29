@@ -1,8 +1,8 @@
 <?php
 session_start();
-
+require('./php/conn.php');
 require("php/commande.php");
-
+require('php/classes/Produit.php');
 if(!isset($_SESSION['htovxcracf2242']))
 {
     header("Location: login.php");
@@ -111,6 +111,10 @@ if(empty($_SESSION['htovxcracf2242']))
                 <label for="">Quantite :</label>
                <input type="number" placeholder="entrer la quantité de produit" class="form-control" name="quantite"><br>
                </div>
+               <div class="formm-group"> 
+        <label for="">categorie :</label>
+        <input type="text" placeholder="entrer la categorie de produit" class="form-control" name="categorie">
+    </div>
          <div class="form-group"> 
             <input type="submit" value="Ajouter" class="form-control btn btn-outline-primary text-white"  name="submit">
         </div>
@@ -138,19 +142,25 @@ if(empty($_SESSION['htovxcracf2242']))
 
   if(isset($_POST['submit']))
   {
-    if( isset($_POST['nom']) AND isset($_POST['prix']) AND isset($_POST['description']))
-    {
-    if( !empty($_POST['nom']) AND !empty($_POST['prix']) AND !empty($_POST['description']))
-	    {
-	    	
-	    	$nom = htmlspecialchars(strip_tags($_POST['nom']));
-	    	$prix = htmlspecialchars(strip_tags($_POST['prix']));
-	    	$quantite = htmlspecialchars(strip_tags($_POST['quantite']));
-            $description = htmlspecialchars(strip_tags($_POST['description']));
-          
+
+
           try 
           {
-            ajouter($nom, $prix,$quantite,$description);
+            	    	
+	    	$nom = htmlspecialchars(strip_tags($_POST['nom']));
+	    	$prix =$_POST['prix'];
+	    	$quantite = $_POST['quantite'];
+            $description = htmlspecialchars(strip_tags($_POST['description']));
+            $categorie = htmlspecialchars(strip_tags($_POST['categorie']));
+            $filename = $_FILES["image"]["name"];
+
+    $tempname = $_FILES["image"]["tmp_name"];  
+
+        $image = "vetement/".$filename;
+    move_uploaded_file($tempname, $image);
+              $produit = new Produit();
+       $produit->insert($nom, $prix, $description, $image, $quantite,$categorie);
+           // ajouter($nom, $prix,$quantite,$description);
             
           } 
           catch (Exception $e) 
@@ -159,7 +169,4 @@ if(empty($_SESSION['htovxcracf2242']))
           }
 
 	    }
-    }
-  }
-
 ?>

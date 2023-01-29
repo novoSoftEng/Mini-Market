@@ -10,9 +10,50 @@ class Produit {
   protected $categorie;
 
   // Method
+  function get_id(){
+    return $this->id_pr;
+  }
+  function get_nom(){
+    return $this->nom;
+  }
+  function get_prix(){
+    return $this->prix;
+  }
+  function get_description(){
+    return $this->description;
+  }
+  function get_image(){
+    return $this->image;
+  }
+  function get_quantite(){
+    return $this->quantite;
+  }
+  function get_categorie(){
+    return $this->categorie;
+  }
+  function insert($nom, $prix,$description,$image,$quantite,$categorie){
+   // require_once("php/conn.php");
+   $host='mysql:host=localhost;dbname=minimarket';
+$user='root';
+$psswd='';
+$conn = new PDO($host,$user,$psswd);
+    $this->nom=$nom;
+    $this->prix=$prix;
+    $this->description=$description;
+    $this->image=$image;
+    $this->quantite=$quantite;
+    $this->categorie=$categorie;
+    $query = $conn->prepare('INSERT INTO produit (nom , prix ,description ,image,quantite,categories) VALUES(? , ? ,?,?,?,?)');
+    $query->execute([$nom,$prix,$description,$image,$quantite,$categorie]);
+    
+    $this->id_pr = $conn->lastInsertId();
+  }
  function select_id($id){
-    require("../conn.php");
-    $req=$access->prepare("SELECT * FROM produit WHERE id_pr=?");
+  $host='mysql:host=localhost;dbname=minimarket';
+  $user='root';
+  $psswd='';
+  $conn = new PDO($host,$user,$psswd);
+    $req=$conn->prepare("SELECT * FROM produit WHERE id_pr=?");
 
       $req->execute([$id]);
       $data = $req->fetch(PDO::FETCH_OBJ);
@@ -22,7 +63,7 @@ class Produit {
    $this->description=$data->description;
    $this->image=$data->image;
    $this->quantite=$data->quantite;
-   $this->categorie=$data->categorie;
+   $this->categorie=$data->categories;
  }
  function afficher_cat($categorie)
 {

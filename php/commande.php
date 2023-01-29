@@ -62,7 +62,7 @@ function afficherUnProduit($id)
   
           return $data;
   
-          $req->closeCursor();
+          
     }
   }
 // function afficher($categorie)
