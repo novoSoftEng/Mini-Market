@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : lun. 23 jan. 2023 à 20:45
+-- Généré le : lun. 23 jan. 2023 à 13:04
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.1.12
 
@@ -20,26 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `minimarket`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `admin`
---
-
-CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
-  `pseudo` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `motdepasse` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Déchargement des données de la table `admin`
---
-
-INSERT INTO `admin` (`id`, `pseudo`, `email`, `motdepasse`) VALUES
-(55, 'nous', 'nous@admin.com', 'nousminimarket#1234');
 
 -- --------------------------------------------------------
 
@@ -65,8 +45,6 @@ CREATE TABLE `client` (
   `prenom` varchar(30) NOT NULL,
   `email` varchar(50) NOT NULL,
   `motdepasse` varchar(50) NOT NULL
-  
-  `motdepasse_confirm` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
