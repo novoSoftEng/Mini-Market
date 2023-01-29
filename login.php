@@ -14,43 +14,65 @@ session_start();
 
 
 ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Login - MonoShop</title>
-</head>
-<body>
-<br>
-<br>
-<br>
-<br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+   <link rel="stylesheet" href="login.css">
+    <title>Sign in & Sign up Form</title>
 
-<div class="container" style="display: flex; justify-content: start-end">
-    <div class="row">
-        <div class="col-md-10">
-
-        <form method="post">
-            <div class="mb-3">
-                <label for="email" class="form-label">Login</label>
-                <input type="email" name="email" class="form-control" style="width: 350%;" >
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form  method="post" class="sign-in-form">
+            <h2 class="title">Admin </h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="email" placeholder="Adresse email "name="email" />
             </div>
-            <div class="mb-3">
-                <label for="motdepasse" class="form-label">Mot de passe</label>
-                <input type="password" name="motdepasse" class="form-control" style="width: 350%;">
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password"name="motdepasse" />
             </div>
-            <br>
-            <input type="submit" name="envoyer" class="btn btn-info" value="Se connecter">
-        </form>
+            <input type="submit" name="envoyer" value="Se connecter" class="btn solid" />
+            <p class="social-text">nous reseaux sociales</p>
+            <div class="social-media">
+              <a href="https://fr-fr.facebook.com/.com" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/?lang=fr" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.google.com/" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="https://linkedin.com" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
 
         </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel right-panel">
+
+          <img src="images/register.svg" class="image" alt="" />
+        </div>
+      </div>
     </div>
-</div>
-    
-</body>
+  </body>
 </html>
 
 <?php
