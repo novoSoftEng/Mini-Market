@@ -5,9 +5,6 @@ session_start();
 if (empty($_SESSION["panier"])) {
     $_SESSION["panier"] = new Panier();
 }
-if(empty($_SESSION["id_cl"])){
-    $_SESSION["id_cl"] = 1;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -72,10 +69,10 @@ if(empty($_SESSION["id_cl"])){
             outline: none;
             display: none;
             position: absolute;
-            z-index: 1;
+            z-index: 8;
             width: 400px;
             height: 400px;
-            right: 0px;
+            right: 7px;
         }
         .g2 {
             border-radius: 15px;
@@ -89,10 +86,10 @@ if(empty($_SESSION["id_cl"])){
             right: 7px;
         }
 
-        section ul li a{
+        /* section ul li a{
     font-size: 13px;
-    /* line-height: 25px; */
-}
+    line-height: 25px;
+} */
         section li:hover>ul {
             display: block;
         }
@@ -113,9 +110,9 @@ if(empty($_SESSION["id_cl"])){
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 
                 <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="index.php">Home</a></li>
+                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
 
-                   
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
@@ -137,7 +134,7 @@ if(empty($_SESSION["id_cl"])){
             <section>
                
                <li> 
-                   <a href="#!" >About</a>
+                   <a href="#">About</a>
 
                    <ul class="g2" >
                    Mini Market est un détaillant électronique national de mode et de style de vie qui s'engage à rendre la beauté de la mode accessible à tous. Nous utilisons une technologie de fabrication à la demande pour connecter les fournisseurs à notre chaîne d'approvisionnement agile, réduisant ainsi le gaspillage des stocks et nous permettant de livrer une variété de produits abordables aux clients. Depuis nos bureaux , nous touchons des clients dans tous les villes dans le Maroc.
