@@ -59,3 +59,17 @@ function cartContent(){
  
      });
 }
+function valide(){
+    $.ajax({
+        type: "POST",
+         url: './php/panierValide.php',
+         success: function () {
+            cartContent();
+            showCart();
+         },
+         error: function () {
+             alert("problem");
+         }
+ 
+     });
+}

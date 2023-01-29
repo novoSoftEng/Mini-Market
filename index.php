@@ -5,6 +5,9 @@ session_start();
 if (empty($_SESSION["panier"])) {
     $_SESSION["panier"] = new Panier();
 }
+if(empty($_SESSION["id_cl"])){
+    $_SESSION["id_cl"] = 1;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

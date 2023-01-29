@@ -8,3 +8,4 @@ foreach($_SESSION["panier"]->get_panierArray() as $key => $value) {
    echo '<p><img src="'.$produit->get_image() .'" alt="..." /> <p>nom :'.$produit->get_nom().' qunatite:'.$value.'</p>';
   }
 echo 'total :'.$_SESSION["panier"]->get_total().'';
+echo '<button onclick="valide()"> valide </button>';
