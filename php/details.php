@@ -61,7 +61,7 @@
 		        <div class="photo-container">
 			        <div class="photo-main">
 				       <?php
-                            echo '<img src="/Mini-Market/vetement/'.$_SESSION['row']['image'].'">'
+                            echo '<img src="../'.$_SESSION['row']['image'].'">'
                        ?>
 			        </div>
 		         </div>
