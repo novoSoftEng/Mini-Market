@@ -23,7 +23,7 @@ class Produit {
     return $this->description;
   }
   function get_image(){
-    return $this->nom;
+    return $this->image;
   }
   function get_quantite(){
     return $this->quantite;
@@ -49,8 +49,11 @@ $conn = new PDO($host,$user,$psswd);
     $this->id_pr = $conn->lastInsertId();
   }
  function select_id($id){
-    require("../conn.php");
-    $req=$access->prepare("SELECT * FROM produit WHERE id_pr=?");
+  $host='mysql:host=localhost;dbname=minimarket';
+  $user='root';
+  $psswd='';
+  $conn = new PDO($host,$user,$psswd);
+    $req=$conn->prepare("SELECT * FROM produit WHERE id_pr=?");
 
       $req->execute([$id]);
       $data = $req->fetch(PDO::FETCH_OBJ);
@@ -60,7 +63,7 @@ $conn = new PDO($host,$user,$psswd);
    $this->description=$data->description;
    $this->image=$data->image;
    $this->quantite=$data->quantite;
-   $this->categorie=$data->categorie;
+   $this->categorie=$data->categories;
  }
  function afficher_cat($categorie)
 {
