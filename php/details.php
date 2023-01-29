@@ -12,11 +12,11 @@
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="/Mini-Market/css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="/Mini-Market/css/product_card.css">
+        <link href="../css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/product_card.css"/>
                 <!-- Core theme JS-->
-                <script src="/Mini-Market/js/scripts.js"></script>
-                <script src="/Mini-Market/jquery.min.js"></script>
+                <script src="../js/scripts.js"></script>
+                <script src="../jquery.min.js"></script>
                
     <body>
         <!-- Navigation-->
