@@ -11,7 +11,7 @@ if(empty($_SESSION["id_cl"])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
+
 
 <head>
     <meta charset="utf-8" />
@@ -88,7 +88,6 @@ if(empty($_SESSION["id_cl"])){
         }
     </style>
 </head>
-=======
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -103,9 +102,9 @@ if(empty($_SESSION["id_cl"])){
         <link href="../css/styles.css" rel="stylesheet" />
         <link rel="stylesheet" href="../css/product_card.css"/>
                 <!-- Core theme JS-->
-                <script src="../js/scripts.js"></script>
-                <script src="../jquery.min.js"></script>
->>>>>>> 1b257138c8a35f1005b6a362d44523fc7da16358
+                <script src="jquery.min.js"></script>
+                <script src="./js/scripts.js"></script>
+                <script src="./js/bootstrap.js"></script>
                
 <body onload="showCart();cartContent()">
     <!-- Navigation-->
