@@ -26,57 +26,62 @@ if (empty($_SESSION["panier"])) {
     <script src="./js/bootstrap.js"></script>
 
 
- <style>
- section li {
-    padding: 0;
-    margin: 0;
-    float:right;
-    margin-right: 30px;
-}
-section li{
-    /* background:#c4bab000; */
-    position:relative ;
-    list-style: none;
-    display: inline-block;
-}
-section li a{
-    display: block;
-    padding: 0px 15px;
-    color:darkgray;
-    /* color: #b80f0f; */
-    text-decoration:none;
-    line-height: 60px;
-    font-size: 18px;
-}
-section li a:hover{
-   
-    cursor: pointer;
-    color: darkgray;
-}
-section ul {
-    position: absolute;
-    top: 60px; 
-    display: none; 
-}
+    <style>
+        section li {
+            padding: 0;
+            margin: 0;
+            float: right;
+            margin-right: 30px;
+        }
 
-.g1{
-    border-radius: 15px;
-     background-color:antiquewhite;
-     outline: none;
-     display: none;
-    position: absolute;
-    z-index: 8;
-    width: 300px;
-    height: 400px;
-}
-/* section ul li a{
+        section li {
+            /* background:#c4bab000; */
+            position: relative;
+            list-style: none;
+            display: inline-block;
+        }
+
+        section li a {
+            display: block;
+            padding: 0px 15px;
+            color: darkgray;
+            /* color: #b80f0f; */
+            text-decoration: none;
+            line-height: 60px;
+            font-size: 18px;
+        }
+
+        section li a:hover {
+
+            cursor: pointer;
+            color: darkgray;
+        }
+
+        section ul {
+            position: absolute;
+            top: 60px;
+            display: none;
+        }
+
+        .g1 {
+            border-radius: 15px;
+            background-color: antiquewhite;
+            outline: none;
+            display: none;
+            position: absolute;
+            z-index: 8;
+            width: 300px;
+            height: 400px;
+        }
+
+        /* section ul li a{
     font-size: 13px;
     line-height: 25px;
 } */
-section li:hover >ul{
-    display: block;
-}
- </style>
+        section li:hover>ul {
+            display: block;
+        }
+    </style>
 
 
 </head>
@@ -110,30 +115,24 @@ section li:hover >ul{
                     <li class="nav-item"><a class="nav-link" href="client.html">se connecter</a></li>
 
                 </ul>
-
-                </ul>
-
-
-                        
-
-                    </ul>
-                           
-                 </ul>
-                 <section>
-                 <div class="d-flex" onclick="cartContent()">
-                    <button class="btn btn-outline-dark btn-secondary" type="button">
-                        <i class="bi-cart-fill me-1">Cart</i>
-                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="panierQnt"></span>
-                    </button>
-                   
-                    <ul class="g1" id="cartContent">
-                                 hhhshshshshhshshhshshhshhshsh
-                                </ul>
-      
-                 </section>
-
-                </div>
             </div>
+
+
+            <section>
+                <div class="d-flex" onhover="cartContent()">
+                    <li> <button class="btn btn-outline-dark btn-secondary" type="button">
+                            <i class="bi-cart-fill me-1">Cart</i>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill" id="panierQnt"></span>
+                        </button>
+
+                        <ul class="g1" id="cartContent">
+                            hhhshshshshhshshhshshhshhshsh
+                        </ul>
+                    </li>
+            </section>
+
+        </div>
+        </div>
         </div>
     </nav>
     <!-- Header-->
