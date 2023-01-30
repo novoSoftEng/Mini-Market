@@ -15,6 +15,7 @@ function afficher(categorie){
 }
 
 
+
 function addCart(id_pr){
     $.ajax({
         type: "POST",
@@ -58,3 +59,15 @@ function cartContent(){
  
      });
 }
+var slides = document.querySelectorAll(".slide");
+var currentSlide = 0;
+
+function changeSlide() {
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = 0;
+  }
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].style.opacity = 1;
+}
+
+setInterval(changeSlide, 5000); // changement toutes les 5 secondes

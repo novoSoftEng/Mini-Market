@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['email'] = $email;
 
         // Redirigez le nouveau client vers la page d'accueil
-        header("Location: index.html");
+        header("Location: index.php");
     } else {
       //  echo "Error: " . $query . "<br>" . $conn->error();
     }

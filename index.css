@@ -172,3 +172,22 @@ background-color:rgb(0, 170, 153,0.5)
 ;
 
 }
+.slider {
+    position: relative;
+    width: 1260px;
+    height: 400px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    width: 1260px;
+    height: 400px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .slide:first-child {
+    opacity: 1;
+  }
+  
