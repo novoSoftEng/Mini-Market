@@ -14,7 +14,6 @@ if (empty($_SESSION["id_cl"])) {
 
 
 <head>
-<<<<<<< HEAD
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
@@ -30,24 +29,6 @@ if (empty($_SESSION["id_cl"])) {
     <script src="./jquery.min.js"></script>
     <script src="/Mini-Market/js/scripts.js"></script>
     <script src="/Mini-Market/js/bootstrap.js"></script>
-=======
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <title>Shop Homepage - Start Bootstrap Template</title>
-  <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <!-- Core theme CSS (includes Bootstrap)-->
-  <link href="../css/styles.css" rel="stylesheet" />
-  <link href="../css/product_card.css" rel="stylesheet" />
-  <link href="../css/bootstrap.css" rel="stylesheet" />
-  <!-- Core theme JS-->
-  <script src="./jquery.min.js"></script>
-  <script src="/Mini-Market/js/scripts.js"></script>
-  <script src="/Mini-Market/js/bootstrap.js"></script>
->>>>>>> adnan
 
   <style>
         section li {
