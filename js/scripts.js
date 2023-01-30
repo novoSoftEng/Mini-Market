@@ -66,8 +66,7 @@ function valide(){
         type: "POST",
          url: '/Mini-Market/php/panierValide.php',
          success: function (r) {
-            alert(r);
-            if(r== false){
+            if(r=== false){
                 window.location.href='/Mini-Market/client.html';
             }
             cartContent();

@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Connexion à la base de données
 $host = "localhost";
 $username = "root";
@@ -6,7 +7,7 @@ $password = "";
 $dbname = "minimarket";
 
 $conn = new mysqli($host, $username, $password, $dbname);
-session_start();
+
 // Vérifiez si la connexion a échoué
 if ($conn->connect_error) {
     die("Connexion échouée: " . $conn->connect_error);
@@ -22,7 +23,7 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($query);
 
     // Vérifiez si l'utilisateur existe
-    if ($result->num_rows > 0) {
+    if ($result->num_rows >0) {
         // Démarrez une session pour l'utilisateur
 
         $_SESSION['email'] = $email;

@@ -1,6 +1,7 @@
 <?php
 require_once('classes/Produit.php');
 require_once('classes/Panier.php');
+require_once('conn.php');
 session_start();
 if (empty($_SESSION["panier"])) {
   $_SESSION["panier"] = new Panier();
