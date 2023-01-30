@@ -32,7 +32,7 @@ if(empty($_SESSION['htovxcracf2242']))
      <link rel="stylesheet" href="index.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
-<body>
+<body style="background-image: url('./vetement/ha.jpg')">
   
          
     <!-- Navigation-->
@@ -66,19 +66,18 @@ if(empty($_SESSION['htovxcracf2242']))
    
     
 
-    <div class="side-bare">
+    <div class="side-bare" style="background-color: rgba(0, 21, 255);     transition: .20s;">
         <div class="close-btn">
 <i class="fas fa-times"></i>        
 </div>
         <div class="menu">
             <img src="admin-png-1.png" width="150px"height="150px"class="img rounded-circle" style="margin-left: 45px;">
-            <div class="item"><a href="#"><i class="fas fa-desktop"> Dashbord</i></a></div>
+            <div class="item"><a href="#"><i class="fas fa-desktop"> My Admin</i></a></div>
             <div class="item">
-                <a class="sub-btn"><i class="fas fa-table"> Tables <i class="fas fa-angle-right dropdown"></i></i></a>
+                <a class="sub-btn"><i class="fas fa-table">Table<i class="fas fa-angle-right dropdown"></i></i></a>
                 <div class="sub-menu">
-                    <a href="#" class="sub-item">sub-item 01</a>
-                    <a href="#" class="sub-item">sub-item 02</a>
-                    <a href="#" class="sub-item">sub-item 03</a>
+                    <a href="adminmodifier.php" class="sub-item">modifier le produit</a>
+                    <a href="adminsupp.php" class="sub-item">suprimer le produit</a>
 
                 </div>
             </div>
@@ -123,7 +122,7 @@ if(empty($_SESSION['htovxcracf2242']))
     </form>
 </section>
 
-    <footer class="foter">
+    <footer class="foter" style="    background-color: rgba(8, 3, 255, 0.3);">
         <div class="media-icons">
        <a href="#"><i class="fab fa-facebook"style="color:white" ></i></a>
        <a href="#"><i class="fab fa-instagram" style="color:white"></i></a>
