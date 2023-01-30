@@ -91,9 +91,18 @@ img {
 
 .variant {
 	border: 5px solid ;
+<<<<<<< HEAD
 	overflow: auto;
 
 	h3 {
+=======
+	overflow: hidden;
+	overflow-x: inherit;
+	width: 300px;
+	height: 200px;
+
+	p {
+>>>>>>> adnan
 		
 		margin-bottom: 1.1em;
 	}

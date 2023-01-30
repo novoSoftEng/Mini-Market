@@ -90,7 +90,7 @@ if(isset($_GET['id'])){
         <label for="exampleInputEmail1" class="form-label">L'image du produit</label>
         <!-- <input type="name" class="form-control" name="image" value="<?= $produit->image ?>" required> -->
         <!-- <img class="card-img-top" src="<?= $produit->image ?>" alt="..." /> -->
-        <input type="file" class="form-control btn-primary" name="image" value="<?= $produit->image ?>" >
+        <input type="text" class="form-control btn-primary" name="image" value="<?= $produit->image ?>" >
 
     </div>
     <div class="mb-3">

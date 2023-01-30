@@ -5,9 +5,6 @@ session_start();
 if (empty($_SESSION["panier"])) {
     $_SESSION["panier"] = new Panier();
 }
-if(empty($_SESSION["id_cl"])){
-    $_SESSION["id_cl"] = 1;
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +19,10 @@ if(empty($_SESSION["id_cl"])){
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
+<<<<<<< HEAD
+=======
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
+>>>>>>> adnan
     <!-- Core theme JS-->
     <script src="jquery.min.js"></script>
     <script src="./js/scripts.js"></script>
@@ -33,7 +34,7 @@ if(empty($_SESSION["id_cl"])){
             padding: 0;
             margin: 0;
             float: right;
-            margin-right: 30px;
+            margin-right: 20px;
         }
 
         section li {
@@ -45,11 +46,11 @@ if(empty($_SESSION["id_cl"])){
 
         section li a {
             display: block;
-            padding: 0px 15px;
+            /* padding: 0px 15px; */
             color: darkgray;
             /* color: #b80f0f; */
             text-decoration: none;
-            line-height: 60px;
+            /* line-height: 60px; */
             font-size: 18px;
         }
 
@@ -61,7 +62,7 @@ if(empty($_SESSION["id_cl"])){
 
         section ul {
             position: absolute;
-            top: 35px;
+            top: 25px;
             display: none;
         }
 
@@ -74,12 +75,37 @@ if(empty($_SESSION["id_cl"])){
             z-index: 8;
             width: 300px;
             height: 400px;
+            right: 7px;
+        }
+        .g2 {
+            border-radius: 15px;
+            background-color: antiquewhite;
+            outline: none;
+            display: none;
+            position: absolute;
+            z-index: 8;
+            width: 360px;
+            height: 300px;
+            right: 7px;
+        }
+        .g3 {
+            border-radius: 15px;
+            background-color: antiquewhite;
+            outline: none;
+            display: none;
+            position: absolute;
+            z-index: 8;
+            width: auto;
+            height: auto;
+            text-align: center;
+            /* font-weight: 80px; */
+            right: 7px;
         }
 
-        /* section ul li a{
-    font-size: 13px;
-    line-height: 25px;
-} */
+        section ul li a{
+            font-size: 13px;
+            line-height: 25px;
+            }     
         section li:hover>ul {
             display: block;
         }
@@ -98,28 +124,45 @@ if(empty($_SESSION["id_cl"])){
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
                 <ul class="navbar-nav ms-auto ">
-                    <li class="nav-item "><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
+                    <li class="nav-item "><a class="nav-link " aria-current="page" href="index.php">Accciel</a></li>
+                    
+                    
+                    
                     <li class="nav-item"><a class="nav-link" href="login.php">connexion</a></li>
                     <li class="nav-item"><a class="nav-link" href="client.html">se connecter</a></li>
 
                 </ul>
             </div>
 
+            <section>
+               
+               <li> 
+                   <a href="#">À propos de nous </a>
 
+                   <ul class="g2" >
+                   Mini Market est un détaillant électronique national de mode et de style de vie qui s'engage à rendre la beauté de la mode accessible à tous. Nous utilisons une technologie de fabrication à la demande pour connecter les fournisseurs à notre chaîne d'approvisionnement agile, réduisant ainsi le gaspillage des stocks et nous permettant de livrer une variété de produits abordables aux clients. Depuis nos bureaux , nous touchons des clients dans tous les villes dans le Maroc.
+                   </ul>
+               </li>
+       </section>
+       <section>
+           
+                  <li>
+                    <a href="#">Categories</a>
+                    <ul class="g3" >
+                        <li onclick="afficher('Robes')"> <a href="#">Robes</a></li>
+                        <li onclick="afficher('casual')" ><a href="#">Casual</a></li>
+                        <li  onclick="afficher('sport')"><a href="#">Sport</a></li>
+                        <li onclick="afficher('classy')" ><a href="#">Classy</a></li>
+                        <li onclick="afficher('bijoux')"><a href="#">Bijoux</a></li>
+                        <li onclick="afficher('maison')"><a href="#">Maison</a></li>
+                        <li onclick="afficher('nourriture')"><a href="#">Nourriture</a></li>
+                        <li onclick="afficher('technologie')"><a href="#">Technologie</a></li>
+                    </ul>
+                   </li>
+            
+            </section>
             <section>
                 <div class="d-flex">
                     <li> <button class="btn btn-outline-dark btn-secondary" type="button">
@@ -140,7 +183,11 @@ if(empty($_SESSION["id_cl"])){
     <!-- Header-->
     <header>
         <div>
+<<<<<<< HEAD
             <img src="vetement/AC.jpg" alt="..." width="1350px">
+=======
+            <img src="vetement/AC.jpg" alt="..." width="100%">
+>>>>>>> adnan
         </div>
     </header>
     <!-- Section-->
