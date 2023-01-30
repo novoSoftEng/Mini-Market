@@ -15,6 +15,7 @@ function afficher(categorie){
 }
 
 
+
 function addCart(id_pr){
     $.ajax({
         type: "POST",
@@ -23,6 +24,8 @@ function addCart(id_pr){
          success: function (qnt) {
              console.log("succes addCart");
             $("#panierQnt").empty().html(qnt);
+            cartContent();
+            showCart();
          },
          error: function () {
              alert("problem");
@@ -63,7 +66,10 @@ function valide(){
     $.ajax({
         type: "POST",
          url: '/Mini-Market/php/panierValide.php',
-         success: function () {
+         success: function (r) {
+            if(r=== false){
+                window.location.href='/Mini-Market/client.html';
+            }
             cartContent();
             showCart();
          },

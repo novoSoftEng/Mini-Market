@@ -77,6 +77,8 @@ if (empty($_SESSION["id_cl"])) {
             z-index: 8;
             width: 300px;
             height: 400px;
+            overflow: hidden;
+            overflow-y: scroll;
             right: 7px;
         }
         .g2 {
@@ -120,6 +122,24 @@ if (empty($_SESSION["id_cl"])) {
   
              margin-left:60px;
          }
+       .nav-link:hover{
+       background:red;
+       border-radius:5px ;
+       }
+        .s:after{
+          content:"";
+          position:absolute;
+          background-color:red ;
+          height:3px;
+          width:0;
+          left:0 ;
+          transition:0.3s;
+        }
+       
+        .s:hover:after{
+                    width:100%;
+
+        }
     </style>
 
                
@@ -128,7 +148,7 @@ if (empty($_SESSION["id_cl"])) {
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <img src="../logo.png" width="60" hight="auto" alt="">
-            <a class="navbar-brand " href="#!">Mini Market</a>
+            <a class="navbar-brand " href="#!" style="cursor:none;">Mini Market</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -158,7 +178,7 @@ if (empty($_SESSION["id_cl"])) {
        <section>
            
                   <li>
-                    <a href="#">Categories</a>
+                    <a href="#" class="s">Categories</a>
                     <ul class="g3" >
                         <li onclick="afficher('Robes')"> <a href="#">Robes</a></li>
                         <li onclick="afficher('casual')" ><a href="#">Casual</a></li>

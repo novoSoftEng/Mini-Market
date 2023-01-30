@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Connexion à la base de données
 $host = "localhost";
 $username = "root";
@@ -22,13 +23,13 @@ if (isset($_POST['submit'])) {
     $result = $conn->query($query);
 
     // Vérifiez si l'utilisateur existe
-    if ($result->num_rows > 0) {
+    if ($result->num_rows >0) {
         // Démarrez une session pour l'utilisateur
-        session_start();
+
         $_SESSION['email'] = $email;
 
         // Redirigez l'utilisateur vers la page d'accueil
-        header("Location: index.html");
+        header("Location: index.php");
     } else {
         ?>
    <!DOCTYPE html>

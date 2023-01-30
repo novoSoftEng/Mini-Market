@@ -10,7 +10,7 @@ if (empty($_SESSION["panier"])) {
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -18,13 +18,15 @@ if (empty($_SESSION["panier"])) {
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/product_card.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
     <!-- Core theme JS-->
-    <script src="jquery.min.js"></script>
-    <script src="./js/scripts.js"></script>
-    <script src="./js/bootstrap.js"></script>
-
+    <script src="/Mini-Market/jquery.min.js"></script>
+    <script src="/Mini-Market/js/scripts.js"></script>
+    <script src="/Mini-Market/js/bootstrap.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
     <style>
         section li {
             padding: 0;
@@ -69,7 +71,7 @@ if (empty($_SESSION["panier"])) {
             display: none;
             position: absolute;
             z-index: 8;
-            width: 400px;
+            width: 300px;
             height: 400px;
             overflow: hidden;
             overflow-y: scroll;
@@ -116,6 +118,7 @@ if (empty($_SESSION["panier"])) {
   
              margin-left:60px;
          }
+         
     </style>
 
 
