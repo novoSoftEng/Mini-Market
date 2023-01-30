@@ -24,7 +24,7 @@ if (empty($_SESSION["panier"])) {
     <script src="./js/scripts.js"></script>
     <script src="./js/bootstrap.js"></script>
 
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <style>
         section li {
             padding: 0;
@@ -105,6 +105,14 @@ if (empty($_SESSION["panier"])) {
         section li:hover>ul {
             display: block;
         }
+        .container {
+           display: flex;
+
+         }
+        .container i {
+  
+             margin-left:60px;
+         }
     </style>
 
 
@@ -179,7 +187,7 @@ if (empty($_SESSION["panier"])) {
     <!-- Header-->
     <header>
         <div>
-            <img src="vetement/AC.jpg" alt="..." width="1350px">
+            <img src="vetement/AC.jpg" alt="..." width="1260px">
         </div>
     </header>
     <!-- Section-->
@@ -403,11 +411,91 @@ if (empty($_SESSION["panier"])) {
         </div>
     </section>
     <!-- Footer-->
-    <footer class="py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p>
+    <footer class="text-center text-lg-start bg-dark text-white">
+  
+   
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Description
+          </h6>
+          <p>Bienvenue sur Shein ! Nous sommes un magasin de proximité proposant une large sélection de produits  Nous visons à offrir une expérience d'achat pratique et agréable pour nos clients. Visitez-nous dès aujourd'hui pour découvrir nos produits et profiter de nos offres spéciales.
+          </p>
         </div>
-    </footer>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Horaires d'ouvertures</h5>
+  
+          <table class="container text-center text-md-start mt-5">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>lundi - Jeudi:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Vendredi - Samedi:</td>
+                <td>8am - 1am</td>
+              </tr>
+              <tr>
+                <td>Dimanche:</td>
+                <td>9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-map-marker-alt"></i> Tanger</p>
+          <p><i class="fas fa-envelope"></i> minimarket@gmail.com</p>
+          <p><i class="fas fa-phone"></i> + 212 61 95 67 88</p>
+          <p><i class="fas fa-phone"></i> + 212 23 45 67 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+<!-- Right -->
+<div class="container">
+<h6 class="text-uppercase fw-bold mb-4">Rejoignez-nous sur les réseaux sociaux</h6> 
+
+  <a href="https://www.google.com/search?q=facebook+wikipedia&sxsrf=AJOqlzV138-Y7zmY1hUutWOIPjsMERpLlg%3A1675040668082&ei=nBfXY5zjBK6jkdUPzuSZgAU&oq=facebook+wi&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgoIABCABBAUEIcCMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIHCAAQgAQQCjIFCAAQgAQ6BAgjECc6CwgAEIAEELEDEIMBSgQIQRgASgQIRhgAUABY0ANgphNoAHAAeACAAdYBiAHmBJIBBTAuMy4xmAEAoAEBwAEB&sclient=gws-wiz-serp" class="me-4 text-reset">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-google"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+<!-- Right -->
+</section>
+ 
+</footer>
 </body>
 
 </html>

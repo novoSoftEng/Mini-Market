@@ -2,7 +2,7 @@ function afficher(categorie){
     $("#categories").hide();
    $.ajax({
        type: "GET",
-        url: './php/afficher.php',
+        url: '/Mini-Market/php/afficher.php',
        data: 'categorie=' + categorie,
         success: function (produits) {
             $("#categories_choisis").empty().html(produits);
@@ -18,7 +18,7 @@ function afficher(categorie){
 function addCart(id_pr){
     $.ajax({
         type: "POST",
-         url: './php/panier.php',
+         url: '/Mini-Market/php/panier.php',
         data: 'id_pr=' + id_pr,
          success: function (qnt) {
              console.log("succes addCart");
@@ -34,7 +34,7 @@ function addCart(id_pr){
 function showCart(){
     $.ajax({
         type: "POST",
-         url: './php/panier.php',
+         url: '/Mini-Market/php/panier.php',
          success: function (qnt) {
              console.log("succes showCart");
             $("#panierQnt").empty().html(qnt);
@@ -48,7 +48,7 @@ function showCart(){
 function cartContent(){
     $.ajax({
         type: "POST",
-         url: './php/panierContenu.php',
+         url: '/Mini-Market/php/panierContenu.php',
          success: function (contenu) {
              console.log("succes showCart");
             $("#cartContent").empty().html(contenu);
@@ -62,7 +62,7 @@ function cartContent(){
 function valide(){
     $.ajax({
         type: "POST",
-         url: './php/panierValide.php',
+         url: '/Mini-Market/php/panierValide.php',
          success: function () {
             cartContent();
             showCart();

@@ -26,7 +26,7 @@ if (empty($_SESSION["id_cl"])) {
     <link href="../css/product_card.css" rel="stylesheet" />
     <link href="../css/bootstrap.css" rel="stylesheet" />
     <!-- Core theme JS-->
-    <script src="./jquery.min.js"></script>
+    <script src="/Mini-Market/jquery.min.js"></script>
     <script src="/Mini-Market/js/scripts.js"></script>
     <script src="/Mini-Market/js/bootstrap.js"></script>
 
@@ -226,7 +226,7 @@ if (empty($_SESSION["id_cl"])) {
       </div>
 
 
-      <div><input class="btn btn-outline-dark mt-auto" type="submit" value="Add to card" /></div>
+      <div><input class="btn btn-outline-dark mt-auto" type="submit" value="Add to card" onclick="addCart(<?php echo $_SESSION['row']['id_pr'] ?>)" /></div>
     </div>
   </section>
 
