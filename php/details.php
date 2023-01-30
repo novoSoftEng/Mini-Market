@@ -29,6 +29,7 @@ if (empty($_SESSION["id_cl"])) {
     <script src="/Mini-Market/jquery.min.js"></script>
     <script src="/Mini-Market/js/scripts.js"></script>
     <script src="/Mini-Market/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
   <style>
         section li {
@@ -110,6 +111,33 @@ if (empty($_SESSION["id_cl"])) {
         section li:hover>ul {
             display: block;
         }
+
+        .container {
+           display: flex;
+
+         }
+        .container i {
+  
+             margin-left:60px;
+         }
+       .nav-link:hover{
+       background:red;
+       border-radius:5px ;
+       }
+        .s:after{
+          content:"";
+          position:absolute;
+          background-color:red ;
+          height:3px;
+          width:0;
+          left:0 ;
+          transition:0.3s;
+        }
+       
+        .s:hover:after{
+                    width:100%;
+
+        }
     </style>
 
                
@@ -118,7 +146,7 @@ if (empty($_SESSION["id_cl"])) {
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <img src="../logo.png" width="60" hight="auto" alt="">
-            <a class="navbar-brand " href="#!">Mini Market</a>
+            <a class="navbar-brand " href="#!" style="cursor:none;">Mini Market</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -138,7 +166,7 @@ if (empty($_SESSION["id_cl"])) {
             <section>
                
                <li> 
-                   <a href="#">À propos de nous </a>
+                   <a href="#">À propos  </a>
 
                    <ul class="g2" >
                    Mini Market est un détaillant électronique national de mode et de style de vie qui s'engage à rendre la beauté de la mode accessible à tous. Nous utilisons une technologie de fabrication à la demande pour connecter les fournisseurs à notre chaîne d'approvisionnement agile, réduisant ainsi le gaspillage des stocks et nous permettant de livrer une variété de produits abordables aux clients. Depuis nos bureaux , nous touchons des clients dans tous les villes dans le Maroc.
@@ -148,7 +176,7 @@ if (empty($_SESSION["id_cl"])) {
        <section>
            
                   <li>
-                    <a href="#">Categories</a>
+                    <a href="#" class="s">Categories</a>
                     <ul class="g3" >
                         <li onclick="afficher('Robes')"> <a href="#">Robes</a></li>
                         <li onclick="afficher('casual')" ><a href="#">Casual</a></li>
@@ -213,119 +241,91 @@ if (empty($_SESSION["id_cl"])) {
   </section>
 
   <!-- Footer-->
-  <footer class="bg-dark text-center text-white">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-google"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
-
-    <!-- Section: Links  -->
-    <section class="">
-      <div class="container text-center text-md-start mt-5">
-        <!-- Grid row -->
-        <div class="row mt-3">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-            <!-- Content -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Company name
-            </h6>
-            <p>
-              Here you can use rows and columns to organize your footer content. Lorem ipsum
-              dolor sit amet, consectetur adipisicing elit.
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Products
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Angular</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">React</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Vue</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Laravel</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-reset">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-reset">Help</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-            <p>
-              <i class="fas fa-envelope me-3"></i>
-              info@example.com
-            </p>
-            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-          </div>
-          <!-- Grid column -->
+  <footer class="text-center text-lg-start bg-dark text-white">
+  
+   
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>Description
+          </h6>
+          <p>Bienvenue sur Shein ! Nous sommes un magasin de proximité proposant une large sélection de produits  Nous visons à offrir une expérience d'achat pratique et agréable pour nos clients. Visitez-nous dès aujourd'hui pour découvrir nos produits et profiter de nos offres spéciales.
+          </p>
         </div>
-        <!-- Grid row -->
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+          <h5 class="text-uppercase mb-4">Horaires d'ouvertures</h5>
+  
+          <table class="container text-center text-md-start mt-5">
+            <tbody class="font-weight-normal">
+              <tr>
+                <td>lundi - Jeudi:</td>
+                <td>8am - 9pm</td>
+              </tr>
+              <tr>
+                <td>Vendredi - Samedi:</td>
+                <td>8am - 1am</td>
+              </tr>
+              <tr>
+                <td>Dimanche:</td>
+                <td>9am - 10pm</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-map-marker-alt"></i> Tanger</p>
+          <p><i class="fas fa-envelope"></i> minimarket@gmail.com</p>
+          <p><i class="fas fa-phone"></i> + 212 61 95 67 88</p>
+          <p><i class="fas fa-phone"></i> + 212 23 45 67 89</p>
+        </div>
+        <!-- Grid column -->
       </div>
-    </section>
-    <!-- Section: Links  -->
-  </footer>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+
+<!-- Right -->
+<div class="container">
+<h6 class="text-uppercase fw-bold mb-4">Rejoignez-nous sur les réseaux sociaux</h6> 
+
+  <a href="https://www.google.com/search?q=facebook+wikipedia&sxsrf=AJOqlzV138-Y7zmY1hUutWOIPjsMERpLlg%3A1675040668082&ei=nBfXY5zjBK6jkdUPzuSZgAU&oq=facebook+wi&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQARgAMgoIABCABBAUEIcCMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIHCAAQgAQQCjIFCAAQgAQ6BAgjECc6CwgAEIAEELEDEIMBSgQIQRgASgQIRhgAUABY0ANgphNoAHAAeACAAdYBiAHmBJIBBTAuMy4xmAEAoAEBwAEB&sclient=gws-wiz-serp" class="me-4 text-reset">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-twitter"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-google"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="" class="me-4 text-reset">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+<!-- Right -->
+</section>
+ 
+</footer>
 </body>
 
 </html>
