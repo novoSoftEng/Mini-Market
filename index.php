@@ -143,7 +143,7 @@ if (empty($_SESSION["panier"])) {
             <section>
                
                <li> 
-                   <a href="#">À propos de nous </a>
+                   <a href="#">À propos  </a>
 
                    <ul class="g2" >
                    Mini Market est un détaillant électronique national de mode et de style de vie qui s'engage à rendre la beauté de la mode accessible à tous. Nous utilisons une technologie de fabrication à la demande pour connecter les fournisseurs à notre chaîne d'approvisionnement agile, réduisant ainsi le gaspillage des stocks et nous permettant de livrer une variété de produits abordables aux clients. Depuis nos bureaux , nous touchons des clients dans tous les villes dans le Maroc.
