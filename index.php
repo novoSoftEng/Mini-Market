@@ -181,7 +181,6 @@ if (empty($_SESSION["panier"])) {
                         </button>
 
                         <ul class="g1" id="cartContent">
-                            hhhshshshshhshshhshshhshhshsh
                         </ul>
                     </li>
             </section>
