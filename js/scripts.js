@@ -55,8 +55,6 @@ function cartContent(){
          success: function (contenu) {
              console.log("succes showCart");
             $("#cartContent").empty().html(contenu);
-            cartContent();
-            showCart();
          },
          error: function () {
              alert("problem");
