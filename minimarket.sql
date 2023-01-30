@@ -2,8 +2,12 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1
--- Version du serveur : 10.4.27-MariaDB
+-- Host: localhost
+-- Generation Time: Jan 30, 2023 at 11:44 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -14,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `minimarket`
+-- Database: `minimarket`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -31,7 +35,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Déchargement des données de la table `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `pseudo`, `email`, `motdepasse`) VALUES
@@ -40,7 +44,7 @@ INSERT INTO `admin` (`id`, `pseudo`, `email`, `motdepasse`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `client`
+-- Table structure for table `client`
 --
 
 CREATE TABLE `client` (
@@ -52,18 +56,16 @@ CREATE TABLE `client` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Déchargement des données de la table `client`
+-- Dumping data for table `client`
 --
 
 INSERT INTO `client` (`id_cl`, `nom`, `prenom`, `email`, `motdepasse`) VALUES
-(1, 'hello', 'peur', 'ag@gmail.com', '123'),
-(2, 'hello', 'peur', 'ag@gmail.com', '123'),
-(3, 'hello', 'peur', 'ag@gmail.com', '123');
+(1, 'hello', 'peur', 'ag@gmail.com', '123');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `commande`
+-- Table structure for table `commande`
 --
 
 CREATE TABLE `commande` (
@@ -74,7 +76,7 @@ CREATE TABLE `commande` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Déchargement des données de la table `commande`
+-- Dumping data for table `commande`
 --
 
 INSERT INTO `commande` (`id_com`, `id_cl`, `total`, `qnt`) VALUES
@@ -82,12 +84,21 @@ INSERT INTO `commande` (`id_com`, `id_cl`, `total`, `qnt`) VALUES
 (2, 1, 10, 1),
 (3, 1, 70, 3),
 (4, 1, 30, 3),
-(5, 1, 10, 1);
+(5, 1, 10, 1),
+(6, 1, 440, 2),
+(7, 1, 220, 1),
+(8, 1, 7888, 1),
+(9, 1, 220, 1),
+(10, 1, 7888, 1),
+(11, 1, 7888, 1),
+(12, 1, 250, 1),
+(13, NULL, 250, 1),
+(14, 1, 310, 1);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `produit`
+-- Table structure for table `produit`
 --
 
 CREATE TABLE `produit` (
@@ -101,7 +112,7 @@ CREATE TABLE `produit` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Déchargement des données de la table `produit`
+-- Dumping data for table `produit`
 --
 
 INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite`, `categories`) VALUES
@@ -141,7 +152,7 @@ INSERT INTO `produit` (`id_pr`, `nom`, `prix`, `description`, `image`, `quantite
 -- --------------------------------------------------------
 
 --
--- Structure de la table `qntcommande`
+-- Table structure for table `qntcommande`
 --
 
 CREATE TABLE `qntcommande` (
@@ -153,7 +164,7 @@ CREATE TABLE `qntcommande` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Déchargement des données de la table `qntcommande`
+-- Dumping data for table `qntcommande`
 --
 
 INSERT INTO `qntcommande` (`id_qnt`, `id_com`, `id_pr`, `total`, `qnt`) VALUES
@@ -162,33 +173,42 @@ INSERT INTO `qntcommande` (`id_qnt`, `id_com`, `id_pr`, `total`, `qnt`) VALUES
 (3, 3, 8, 0, 1),
 (4, 3, 6, 0, 1),
 (5, 4, 9, 0, 3),
-(6, 5, 8, 10, 1);
+(6, 5, 8, 10, 1),
+(7, 6, 3, 440, 2),
+(8, 7, 3, 220, 1),
+(9, 8, 4, 7888, 1),
+(10, 9, 3, 220, 1),
+(11, 10, 4, 7888, 1),
+(12, 11, 4, 7888, 1),
+(13, 12, 33, 250, 1),
+(14, 13, 2, 250, 1),
+(15, 14, 12, 310, 1);
 
 --
--- Index pour les tables déchargées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `client`
+-- Indexes for table `client`
 --
 ALTER TABLE `client`
   ADD PRIMARY KEY (`id_cl`);
 
 --
--- Index pour la table `commande`
+-- Indexes for table `commande`
 --
 ALTER TABLE `commande`
   ADD PRIMARY KEY (`id_com`),
   ADD KEY `id_cl` (`id_cl`);
 
 --
--- Index pour la table `produit`
+-- Indexes for table `produit`
 --
 ALTER TABLE `produit`
   ADD PRIMARY KEY (`id_pr`);
 
 --
--- Index pour la table `qntcommande`
+-- Indexes for table `qntcommande`
 --
 ALTER TABLE `qntcommande`
   ADD PRIMARY KEY (`id_qnt`),
@@ -196,45 +216,45 @@ ALTER TABLE `qntcommande`
   ADD KEY `id_pr` (`id_pr`);
 
 --
--- AUTO_INCREMENT pour les tables déchargées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `client`
+-- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
   MODIFY `id_cl` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT pour la table `commande`
+-- AUTO_INCREMENT for table `commande`
 --
 ALTER TABLE `commande`
-  MODIFY `id_com` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_com` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
--- AUTO_INCREMENT pour la table `produit`
+-- AUTO_INCREMENT for table `produit`
 --
 ALTER TABLE `produit`
   MODIFY `id_pr` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
--- AUTO_INCREMENT pour la table `qntcommande`
+-- AUTO_INCREMENT for table `qntcommande`
 --
 ALTER TABLE `qntcommande`
-  MODIFY `id_qnt` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_qnt` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- Contraintes pour les tables déchargées
+-- Constraints for dumped tables
 --
 
 --
--- Contraintes pour la table `commande`
+-- Constraints for table `commande`
 --
 ALTER TABLE `commande`
   ADD CONSTRAINT `commande_ibfk_1` FOREIGN KEY (`id_cl`) REFERENCES `client` (`id_cl`);
 
 --
--- Contraintes pour la table `qntcommande`
+-- Constraints for table `qntcommande`
 --
 ALTER TABLE `qntcommande`
   ADD CONSTRAINT `qntcommande_ibfk_1` FOREIGN KEY (`id_com`) REFERENCES `commande` (`id_com`),
