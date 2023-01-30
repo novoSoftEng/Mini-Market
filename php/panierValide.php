@@ -12,4 +12,5 @@ if(empty($_SESSION["email"])){
     $req->execute([$email]);
     $data = $req->fetch(PDO::FETCH_OBJ);
     $_SESSION["panier"]->valide($data->id_cl);
+    echo "$data->id_cl";
 }

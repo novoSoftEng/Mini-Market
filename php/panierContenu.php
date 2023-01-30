@@ -21,7 +21,7 @@ foreach ($_SESSION["panier"]->get_panierArray() as $key => $value) {
   $produit->select_id(trim($key, "'"));
   echo '<tr><td><img src="/Mini-Market/' . $produit->get_image() .
    '" alt="..." width="100" 
-   height="100"/> </td><td>' . $produit->get_nom() . '</td><td> '.$produit->get_prix().'</td><td>' . $value . '</td>';
+   height="100"/> </td><td>' . $produit->get_nom() . '</td><td align="center"> '.$produit->get_prix().'</td><td  align="center">' . $value . '</td>';
 }
 
 echo '</tbody>
