@@ -100,7 +100,7 @@ if(empty($_SESSION['htovxcracf2242']))
     </div>
     <div class="formm-group"> 
         <label for="">Ajouter une photo :</label>
-        <input type="file" class="form-control btn-primary" name="image">
+        <input type="text" class="form-control btn-primary" name="image">
     </div>
       
         <div class="form-group">       
@@ -152,15 +152,11 @@ if(empty($_SESSION['htovxcracf2242']))
 	    	$quantite = $_POST['quantite'];
             $description = htmlspecialchars(strip_tags($_POST['description']));
             $categorie = htmlspecialchars(strip_tags($_POST['categorie']));
-            $filename = $_FILES["image"]["name"];
-
-    $tempname = $_FILES["image"]["tmp_name"];  
-
-        $image = "vetement/".$filename;
-    move_uploaded_file($tempname, $image);
+            $image = htmlspecialchars(strip_tags($_POST['image']));
+    
               $produit = new Produit();
-       $produit->insert($nom, $prix, $description, $image, $quantite,$categorie);
-           // ajouter($nom, $prix,$quantite,$description);
+             $produit->insert($nom, $prix, $description, $image, $quantite,$categorie);
+          
             
           } 
           catch (Exception $e) 
