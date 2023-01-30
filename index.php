@@ -19,7 +19,7 @@ if (empty($_SESSION["panier"])) {
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
     <!-- Core theme JS-->
     <script src="jquery.min.js"></script>
     <script src="./js/scripts.js"></script>
@@ -126,18 +126,7 @@ if (empty($_SESSION["panier"])) {
                     <li class="nav-item "><a class="nav-link " aria-current="page" href="index.php">Accciel</a></li>
                     
                     
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">catégories</a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#!">All Products</a></li>
-                            <li>
-                                <hr class="dropdown-divider" />
-                            </li>
-                            <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                            <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                        </ul>
-                    </li>
+                    
                     <li class="nav-item"><a class="nav-link" href="login.php">connexion</a></li>
                     <li class="nav-item"><a class="nav-link" href="client.html">se connecter</a></li>
 
@@ -159,14 +148,14 @@ if (empty($_SESSION["panier"])) {
                   <li>
                     <a href="#">Categories</a>
                     <ul class="g3" >
-                        <li ><a href="#">Robes</a></li>
-                        <li ><a href="#">Casual</a></li>
-                        <li ><a href="#">Sport</a></li>
-                        <li ><a href="#">Classy</a></li>
-                        <li ><a href="#">Bijoux</a></li>
-                        <li ><a href="#">Maison</a></li>
-                        <li ><a href="#">Nourriture</a></li>
-                        <li ><a href="#">Technologie</a></li>
+                        <li onclick="afficher('Robes')"> <a href="#">Robes</a></li>
+                        <li onclick="afficher('casual')" ><a href="#">Casual</a></li>
+                        <li  onclick="afficher('sport')"><a href="#">Sport</a></li>
+                        <li onclick="afficher('classy')" ><a href="#">Classy</a></li>
+                        <li onclick="afficher('bijoux')"><a href="#">Bijoux</a></li>
+                        <li onclick="afficher('maison')"><a href="#">Maison</a></li>
+                        <li onclick="afficher('nourriture')"><a href="#">Nourriture</a></li>
+                        <li onclick="afficher('technologie')"><a href="#">Technologie</a></li>
                     </ul>
                    </li>
             
@@ -191,7 +180,7 @@ if (empty($_SESSION["panier"])) {
     <!-- Header-->
     <header>
         <div>
-            <img src="vetement/AC.jpg" alt="..." width="1260px">
+            <img src="vetement/AC.jpg" alt="..." width="100%">
         </div>
     </header>
     <!-- Section-->
@@ -213,7 +202,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('Robes')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -246,7 +235,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('casual')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -298,7 +287,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('classy')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -322,7 +311,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('bijoux')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +331,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('maison')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -374,7 +363,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('nourriture')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -402,7 +391,7 @@ if (empty($_SESSION["panier"])) {
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('technologie')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>

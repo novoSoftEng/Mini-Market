@@ -69,7 +69,7 @@ foreach($_SESSION['htovxcracf2242'] as $i){
             <thead>
                 <tr>
                 <th scope="col">id</th>
-                <th scope="col">image</th>
+                <th scope="col"style="padding-left: 70px">image</th>
                 <th scope="col">nom</th>
                 <th scope="col">prix</th>
                 <th scope="col">Description</th>
@@ -80,12 +80,12 @@ foreach($_SESSION['htovxcracf2242'] as $i){
 <?php foreach($produits as $produit): ?>
                 <tr>
                 <th scope="row"><?= $produit->id_pr ?></th>
-                <td>
-                <img src="<?= $produit->image ?>" style="width: 15%">
+                <td style="padding-left: 40px">
+                <img src="<?= $produit->image ?>" style="width: 30%">
                 </td>
-                <td><?= $produit->nom ?></td>
+                <td ><?= $produit->nom ?></td>
                 <td style="font-weight: bold; color: green;"><?= $produit->prix ?>DH</td>
-                <td><?= substr($produit->description, 0, 100); ?>...</td>
+                <td><?= substr($produit->description, 0, 50); ?>...</td>
                 <td><a href="adminmodifier.php?id=<?= $produit->id_pr ?>"><i class="fa fa-pencil" style="font-size: 30px;"></i></a></td>
                 </tr>      
 <?php endforeach; ?>

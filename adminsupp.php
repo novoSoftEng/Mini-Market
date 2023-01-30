@@ -49,6 +49,9 @@ $Produits=afficher();
         <li class="nav-item">
         <a class="nav-link active "style="font-weight: bold;" href="adminsupp.php">Suppression</a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link active "style="font-weight: bold;" href="adminmodifier.php">Modification</a>
+        </li>
         
         
     </ul>

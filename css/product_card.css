@@ -90,9 +90,14 @@ img {
 }
 
 .variant {
-	overflow: auto;
+	border: 5px solid ;
+	overflow: hidden;
+	overflow-x: inherit;
+	width: 300px;
+	height: 200px;
 
-	h3 {
+	p {
+		
 		margin-bottom: 1.1em;
 	}
 
