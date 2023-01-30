@@ -22,7 +22,6 @@ if(empty($_SESSION["id_cl"])){
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- Core theme JS-->
     <script src="jquery.min.js"></script>
     <script src="./js/scripts.js"></script>
@@ -141,7 +140,7 @@ if(empty($_SESSION["id_cl"])){
     <!-- Header-->
     <header>
         <div>
-            <img src="vetement/AC.jpg" alt="..." width="1260px">
+            <img src="vetement/AC.jpg" alt="..." width="1350px">
         </div>
     </header>
     <!-- Section-->
@@ -163,7 +162,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('Robes')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -196,7 +195,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('casual')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -248,7 +247,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('classy')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -272,7 +271,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('bijoux')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -292,7 +291,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('maison')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -324,7 +323,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('nourriture')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>
@@ -352,7 +351,7 @@ if(empty($_SESSION["id_cl"])){
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
+                            <div class="text-center" onclick="afficher('technologie')"><a class="btn btn-outline-dark mt-auto" href="#">View options</a>
                             </div>
                         </div>
                     </div>

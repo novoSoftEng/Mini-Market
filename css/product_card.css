@@ -90,9 +90,11 @@ img {
 }
 
 .variant {
+	border: 5px solid ;
 	overflow: auto;
 
 	h3 {
+		
 		margin-bottom: 1.1em;
 	}
 

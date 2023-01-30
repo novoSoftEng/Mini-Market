@@ -22,9 +22,9 @@ if(empty($_SESSION["id_cl"])){
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="/Mini-Market/css/styles.css" rel="stylesheet" />
-    <link href="/Mini-Market/css/product_card.css" rel="stylesheet" />
-    <link href="/Mini-Market/css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/product_card.css" rel="stylesheet" />
+    <link href="../css/bootstrap.css" rel="stylesheet" />
     <!-- Core theme JS-->
     <script src="./jquery.min.js"></script>
     <script src="/Mini-Market/js/scripts.js"></script>
@@ -87,24 +87,7 @@ if(empty($_SESSION["id_cl"])){
             display: block;
         }
     </style>
-</head>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Shop Homepage - Start Bootstrap Template</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="/Mini-Market/assets/favicon.ico" />
-        <!-- Bootstrap icons-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../css/styles.css" rel="stylesheet" />
-        <link rel="stylesheet" href="../css/product_card.css"/>
-                <!-- Core theme JS-->
-                <script src="jquery.min.js"></script>
-                <script src="./js/scripts.js"></script>
-                <script src="./js/bootstrap.js"></script>
+
                
 <body onload="showCart();cartContent()">
     <!-- Navigation-->

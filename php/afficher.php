@@ -18,8 +18,6 @@ $produits = new Produit();
                         <h5 class="fw-bolder">'.$produit->nom .'</h5>
                         <!-- Product price-->
                         <h5 class="fw-bolder">'.$produit->prix .'DH</h5>
-                        <h5 class="fw-bolder">'.$produit->description .'</h5>
-                        <h3 class="fw-bolder">'.$produit->quantite .'</h3>
                     </div>
                 </div>
                 <!-- Product actions-->
