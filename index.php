@@ -179,11 +179,7 @@ if (empty($_SESSION["panier"])) {
     <!-- Header-->
     <header>
         <div>
-<<<<<<< HEAD
             <img src="vetement/AC.jpg" alt="..." width="1350px">
-=======
-            <img src="vetement/AC.jpg" alt="..." width="100%">
->>>>>>> adnan
         </div>
     </header>
     <!-- Section-->
