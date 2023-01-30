@@ -19,10 +19,6 @@ if (empty($_SESSION["panier"])) {
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-<<<<<<< HEAD
-=======
-    <!-- <link href="css/bootstrap.css" rel="stylesheet" /> -->
->>>>>>> adnan
     <!-- Core theme JS-->
     <script src="jquery.min.js"></script>
     <script src="./js/scripts.js"></script>

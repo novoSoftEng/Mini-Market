@@ -131,11 +131,7 @@ if (empty($_SESSION["id_cl"])) {
         }
     </style>
 
-<<<<<<< HEAD
                
-=======
-
->>>>>>> adnan
 <body onload="showCart();cartContent()">
   <!-- Navigation-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
