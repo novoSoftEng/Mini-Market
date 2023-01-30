@@ -23,6 +23,8 @@ function addCart(id_pr){
          success: function (qnt) {
              console.log("succes addCart");
             $("#panierQnt").empty().html(qnt);
+            cartContent();
+            showCart();
          },
          error: function () {
              alert("problem");
@@ -38,6 +40,7 @@ function showCart(){
          success: function (qnt) {
              console.log("succes showCart");
             $("#panierQnt").empty().html(qnt);
+            cartContent();
          },
          error: function () {
              alert("problem");
@@ -52,6 +55,8 @@ function cartContent(){
          success: function (contenu) {
              console.log("succes showCart");
             $("#cartContent").empty().html(contenu);
+            cartContent();
+            showCart();
          },
          error: function () {
              alert("problem");
