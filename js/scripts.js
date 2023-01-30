@@ -70,7 +70,6 @@ function valide(){
             if(r==false){
                 window.location.href='/Mini-Market/client.html';
             }else{
-                alert(r);
                 cartContent();
             showCart();
             }
