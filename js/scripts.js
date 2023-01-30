@@ -68,9 +68,11 @@ function valide(){
          success: function (r) {
             if(r=== false){
                 window.location.href='/Mini-Market/client.html';
-            }
-            cartContent();
+            }else{
+                cartContent();
             showCart();
+            }
+            
          },
          error: function () {
              alert("problem");
