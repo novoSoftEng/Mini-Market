@@ -122,6 +122,15 @@ if (empty($_SESSION["id_cl"])) {
   
              margin-left:60px;
          }
+         .payment-methods {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-methods i {
+  font-size: 24px;
+  margin:0 10px;
+}
        .nav-link:hover{
        background:red;
        border-radius:5px ;
@@ -243,7 +252,7 @@ if (empty($_SESSION["id_cl"])) {
   </section>
 
   <!-- Footer-->
-  <footer class="text-center text-lg-start bg-dark text-white">
+  <footer class="text-center text-lg-start bg-white text-dark">
   
    
   <!-- Section: Links  -->
@@ -323,6 +332,12 @@ if (empty($_SESSION["id_cl"])) {
   <a href="" class="me-4 text-reset">
     <i class="fab fa-github"></i>
   </a>
+</div>
+<div class="payment-methods">
+  <h6 class="text-uppercase fw-bold mb-4">Nous acceptons</h6> 
+  <i class="fab fa-cc-visa" style="color: #ffa500"></i>
+  <i class="fab fa-cc-mastercard" style="color: #0070ba"></i>
+  <i class="fab fa-cc-paypal" style="color: #003087"></i>
 </div>
 <!-- Right -->
 </section>

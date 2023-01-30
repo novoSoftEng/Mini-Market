@@ -10,7 +10,7 @@ if (empty($_SESSION["panier"])) {
 <html lang="en">
 
 <head>
-<meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -18,15 +18,14 @@ if (empty($_SESSION["panier"])) {
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="../css/styles.css" rel="stylesheet" />
-    <link href="../css/product_card.css" rel="stylesheet" />
-    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <!-- Core theme JS-->
-    <script src="/Mini-Market/jquery.min.js"></script>
-    <script src="/Mini-Market/js/scripts.js"></script>
-    <script src="/Mini-Market/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="jquery.min.js"></script>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <style>
         section li {
             padding: 0;
@@ -118,7 +117,114 @@ if (empty($_SESSION["panier"])) {
   
              margin-left:60px;
          }
-         
+         .payment-methods {
+  display: flex;
+  justify-content: center;
+}
+
+.payment-methods i {
+  font-size: 24px;
+  margin:0 10px;
+}
+         /* page de ichhar  */
+.image-difi{
+  width: 90%;
+  height: 400px;
+}
+.mySlides {
+  display: none
+  }
+img {
+  vertical-align: middle;
+  }
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  }
+  /* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  }
+  /* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  }
+  /* Caption text */
+
+  /* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  }
+  /* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #999999;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  }
+.active,
+.dot:hover {
+  background-color: #111111;
+  }
+  /* Fading animation */
+  .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  }
+@-webkit-keyframes fade {
+  from {
+  opacity: .4
+  }
+  to {
+  opacity: 1
+    }
+  }
+@keyframes fade {
+  from {
+  opacity: .4
+  }
+  to {
+  opacity: 1
+  }
+  }
+  /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px
+  }
+  }
+
     </style>
 
 
@@ -192,9 +298,79 @@ if (empty($_SESSION["panier"])) {
     </nav>
     <!-- Header-->
     <header>
-        <div>
+        <!-- <div>
             <img src="vetement/AC.jpg" alt="..." width="1260px">
-        </div>
+        </div> -->
+        <div class="div-head2" >
+             <!------------ Page Défiliant ---------------->
+
+             <div class="nicejob" id="helloss">
+                <div class="slideshow-container"> 
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 8</div>
+                      <img src="logo.png"class="image-difi">
+                     
+                    </div> </a>
+
+                    <div class="mySlides fade"> 
+                      <div class="numbertext">2 / 8</div>
+                      <img src="image1.jpg" class="image-difi">
+                     
+                    </div>  </a>
+
+                    <div class="mySlides fade"> 
+                      <div class="numbertext">3 / 8</div>
+                      <img src="image9.png" class="image-difi">
+                      
+                    </div> </a>
+
+                    <div class="mySlides fade"> 
+                      <div class="numbertext">4 / 8</div>
+                      <img src="image1.jpg"  class="image-difi">
+                      
+                    </div> </a>
+
+                    <div class="mySlides fade"> 
+                      <div class="numbertext">5 / 8</div>
+                      <img src="logo.png"  class="image-difi">
+                      
+                    </div> </a>
+
+                    <div class="mySlides fade"> 
+                      <div class="numbertext">6 / 8</div>
+                      <img src="image1.jpg"class="image-difi">
+                      
+                    </div> </a>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">7 / 8</div>
+                      <img src="logo.png" class="image-difi">
+                     
+                    </div> </a>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">8 / 8</div>
+                      <img src="image9.png"  class="image-difi">
+                     
+                    </div> </a>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                  </div>
+            </div>
+        </div>      
+    
     </header>
     <!-- Section-->
     <section class="py-5">
@@ -417,7 +593,7 @@ if (empty($_SESSION["panier"])) {
         </div>
     </section>
     <!-- Footer-->
-    <footer class="text-center text-lg-start bg-dark text-white">
+    <footer class="text-center text-lg-start bg-white text-dark">
   
    
   <!-- Section: Links  -->
@@ -498,9 +674,15 @@ if (empty($_SESSION["panier"])) {
     <i class="fab fa-github"></i>
   </a>
 </div>
+<div class="payment-methods">
+  <h6 class="text-uppercase fw-bold mb-4">Nous acceptons</h6> 
+  <i class="fab fa-cc-visa" style="color: #ffa500"></i>
+  <i class="fab fa-cc-mastercard" style="color: #0070ba"></i>
+  <i class="fab fa-cc-paypal" style="color: #003087"></i>
+</div>
 <!-- Right -->
 </section>
- 
+<script src="pagedef.js"></script>
 </footer>
 </body>
 
