@@ -40,7 +40,6 @@ function showCart(){
          success: function (qnt) {
              console.log("succes showCart");
             $("#panierQnt").empty().html(qnt);
-            cartContent();
          },
          error: function () {
              alert("problem");
@@ -66,7 +65,11 @@ function valide(){
     $.ajax({
         type: "POST",
          url: '/Mini-Market/php/panierValide.php',
-         success: function () {
+         success: function (r) {
+            alert(r);
+            if(r== false){
+                window.location.href='/Mini-Market/client.html';
+            }
             cartContent();
             showCart();
          },

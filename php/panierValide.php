@@ -1,12 +1,14 @@
 <?php
 require_once('classes/Produit.php');
 require_once('classes/Panier.php');
+require_once('classes/Panier.php');
 session_start();
 if(empty($_SESSION["email"])){
-    header('Location: localhost/Mini-Market/client.html');
+   echo false;
 }else{
     $email = $_SESSION["email"];
-    $test = "SELECT id_cl FROM client WHERE email='$email'";
-    $result = $conn->query($test);
-    $_SESSION["panier"]->valide($result);
+    $req=$conn->prepare("SELECT id_cl FROM client WHERE email=?");
+    $req->execute([$email]);
+    $data = $req->fetch(PDO::FETCH_OBJ);
+    $_SESSION["panier"]->valide($data->id_cl);
 }
