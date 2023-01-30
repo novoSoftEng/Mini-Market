@@ -11,6 +11,14 @@ if (isset($_POST['submit'])) {
     
 
     // Insertion des informations d'inscription dans la base de données
+    $test = "SELECT * FROM client WHERE email='$email' AND motdepasse='$password'";
+    $result = $conn->query($test);
+    if ($result->num_rows > 0) {
+      // Démarrez une session pour l'utilisateur
+
+      // Redirigez l'utilisateur vers la page d'accueil
+      header("Location: client.html");
+  }else{
     $query = "INSERT INTO client (nom, prenom, email, motdepasse) VALUES ('$nom', '$prenom', '$email', '$password')";
     if ($conn->query($query)) {
         // Démarrez une session pour le nouveau client
@@ -19,9 +27,7 @@ if (isset($_POST['submit'])) {
 
         // Redirigez le nouveau client vers la page d'accueil
         header("Location: index.php");
-    } else {
-      //  echo "Error: " . $query . "<br>" . $conn->error();
-    }
+    } }
 }
 ?>
 

@@ -6,7 +6,7 @@ $password = "";
 $dbname = "minimarket";
 
 $conn = new mysqli($host, $username, $password, $dbname);
-
+session_start();
 // Vérifiez si la connexion a échoué
 if ($conn->connect_error) {
     die("Connexion échouée: " . $conn->connect_error);
@@ -24,11 +24,11 @@ if (isset($_POST['submit'])) {
     // Vérifiez si l'utilisateur existe
     if ($result->num_rows > 0) {
         // Démarrez une session pour l'utilisateur
-        session_start();
+
         $_SESSION['email'] = $email;
 
         // Redirigez l'utilisateur vers la page d'accueil
-        header("Location: index.html");
+        header("Location: index.php");
     } else {
         ?>
    <!DOCTYPE html>
