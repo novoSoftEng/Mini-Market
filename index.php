@@ -69,8 +69,10 @@ if (empty($_SESSION["panier"])) {
             display: none;
             position: absolute;
             z-index: 8;
-            width: 300px;
+            width: 400px;
             height: 400px;
+            overflow: hidden;
+            overflow-y: scroll;
             right: 7px;
         }
         .g2 {
@@ -80,6 +82,7 @@ if (empty($_SESSION["panier"])) {
             display: none;
             position: absolute;
             z-index: 8;
+            
             width: 360px;
             height: 300px;
             right: 7px;

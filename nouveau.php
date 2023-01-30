@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
     // Insertion des informations d'inscription dans la base de données
     $query = "INSERT INTO client (nom, prenom, email, motdepasse) VALUES ('$nom', '$prenom', '$email', '$password')";
-    if ($conn->query($query) === TRUE) {
+    if ($conn->query($query) ==TRUE) {
         // Démarrez une session pour le nouveau client
         session_start();
         $_SESSION['email'] = $email;

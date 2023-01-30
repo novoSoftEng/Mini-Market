@@ -49,7 +49,7 @@ if(empty($_SESSION['htovxcracf2242']))
                     <li class="nav-item"><a class="nav-link"  style="color:white" style="font-weight: bold;" >Ajouter</a></li>
                     <li class="nav-item"><a class="nav-link" href="adminsupp.php" style="color:white">supprimer</a></li>
                     <li class="nav-item"><a class="nav-link" href="adminmodifier.php" style="color:white">modifier</a></li>
-                    <li class="nav-item"><a class="nav-link" href="page2.php" style="color:white">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php" style="color:white">site</a></li>
                     <li class="nav-item"><a class="nav-link" href="deconnexion.php" style="color:white">se deconnecter</a></li>
                 </ul>
                 <form class="d-flex">
