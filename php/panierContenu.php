@@ -28,5 +28,5 @@ echo '</tbody>
 </table>';
 
 echo 'total :' . $_SESSION["panier"]->get_total() . '';
-echo '<button onclick="valide()"> valide </button>';
+echo '<button class="btn btn-outline-dark mt-auto" onclick="valide()"> valide </button>';
 ?>
