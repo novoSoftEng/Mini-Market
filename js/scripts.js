@@ -13,7 +13,10 @@ function afficher(categorie){
 
     });
 }
-
+function afficher2(categorie){
+window.location.href="/Mini-Market/";
+afficher(categorie);
+}
 
 
 function addCart(id_pr){

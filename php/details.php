@@ -189,14 +189,14 @@ if (empty($_SESSION["id_cl"])) {
                   <li>
                     <a href="#" class="s">Categories</a>
                     <ul class="g3" >
-                        <li onclick="afficher('Robes')"> <a href="#">Robes</a></li>
-                        <li onclick="afficher('casual')" ><a href="#">Casual</a></li>
-                        <li  onclick="afficher('sport')"><a href="#">Sport</a></li>
-                        <li onclick="afficher('classy')" ><a href="#">Classy</a></li>
-                        <li onclick="afficher('bijoux')"><a href="#">Bijoux</a></li>
-                        <li onclick="afficher('maison')"><a href="#">Maison</a></li>
-                        <li onclick="afficher('nourriture')"><a href="#">Nourriture</a></li>
-                        <li onclick="afficher('technologie')"><a href="#">Technologie</a></li>
+                        <li onclick="afficher2('Robes')"> <a href="#">Robes</a></li>
+                        <li onclick="afficher2('casual')" ><a href="#">Casual</a></li>
+                        <li  onclick="afficher2('sport')"><a href="#">Sport</a></li>
+                        <li onclick="afficher2('classy')" ><a href="#">Classy</a></li>
+                        <li onclick="afficher2('bijoux')"><a href="#">Bijoux</a></li>
+                        <li onclick="afficher2('maison')"><a href="#">Maison</a></li>
+                        <li onclick="afficher2('nourriture')"><a href="#">Nourriture</a></li>
+                        <li onclick="afficher2('technologie')"><a href="#">Technologie</a></li>
                     </ul>
                    </li>
             
