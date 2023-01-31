@@ -135,7 +135,7 @@ if (empty($_SESSION["panier"])) {
 
     /* page de ichhar  */
     .image-difi {
-      width: 90%;
+      width: 100%;
       height: 400px;
     }
 
