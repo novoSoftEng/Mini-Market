@@ -27,6 +27,6 @@ foreach ($_SESSION["panier"]->get_panierArray() as $key => $value) {
 echo '</tbody>
 </table>';
 
-echo 'total :' . $_SESSION["panier"]->get_total() . '';
-echo '<button class="btn btn-outline-dark mt-auto" onclick="valide()"> valide </button>';
+echo 'total :' . $_SESSION["panier"]->get_total() . ''.'DH';
+echo '<div class="text-center" onclick="valide()"><a class="btn btn-outline-dark mt-auto" href="#">Valider</a>';
 ?>
